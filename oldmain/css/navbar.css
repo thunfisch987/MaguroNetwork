@@ -1,0 +1,30 @@
+header.navbar {
+  background-color: #232323;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 10vh;
+  width: 100vw;
+}
+
+div.home {
+  position: fixed;
+  top: 20;
+  display: inline-block;
+  transition: .2s;
+}
+
+div.home:hover {
+  transform: scale(1.05);
+}
+
+a.home {
+  text-decoration: none;
+}
+
+a.home:link, a.home:visited {
+  color: white;
+}
+
+a.home:hover, a.home:active {
+}
