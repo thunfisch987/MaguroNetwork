@@ -4,5 +4,46 @@ body {
 
 div {
   /*background-color: red;*/
-  border: 1px solid lime;
+  /*border: 1px solid lime;*/
+}
+
+#header {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+#headertext {
+  background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+#navtop {
+  height: 1px;
+  background-color: #232323;
+}
+
+#navigationbar {
+  background-color: #232323;
+  top: 0;
+}
+
+#magnet {
+  visibility: hidden;
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  transition: .5s;
+}
+
+#magnet.isSticky {
+  visibility: visible;
+  animation: fadeIn;
+  animation-duration: 1s;
+  transition: .5s;
+}
+
+#logo {
+  /*background-color: white;*/
 }
