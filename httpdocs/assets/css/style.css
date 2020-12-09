@@ -15,22 +15,9 @@ div {
 #headertext {
   background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
   -webkit-background-clip: text;
-  background-clip: text;
-  /*-webkit-text-fill-color: transparent;*/
+  -webkit-text-fill-color: transparent;
   padding: 1rem;
   margin-bottom: 0;
-  color: transparent;
-  animation: rainbow_animation 6s ease-in-out infinite;
-  background-size: 400% 100%;
-}
-
-@keyframes rainbow_animation {
-  0%,100% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 100% 0;
-  }
 }
 
 #navtop {
