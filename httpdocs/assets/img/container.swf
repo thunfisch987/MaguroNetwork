@@ -1,0 +1,5 @@
+var myLoader:Loader = new Loader();
+var myUrl:URLRequest = new URLRequest("og_gif.gif");
+myLoader.load(myUrl);
+
+addChild(myLoader);
