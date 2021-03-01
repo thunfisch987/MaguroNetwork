@@ -1,0 +1,30 @@
+body {
+	background-color: white;
+	color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+		color: white;
+	}
+}
+
+.mySlides {
+	display: none;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.imp {
+	font-family: 'proxima_nova_ltsemibold', sans-serif;
+}

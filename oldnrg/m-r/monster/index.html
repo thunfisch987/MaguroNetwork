@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Energys4Life - Monster</title>
+
+	<script src="code.js" type="text/javascript" charset="utf-8"></script>
+
+	<link rel="stylesheet" href="fonts/fonts.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous&display=swap">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" type="text/css">
+	<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body>
+
+	<!--große Bildschirme-->
+	<div class="w3-row">
+
+		<header class="w3-container ">
+			<img src="img/monster-logo.png" class="">
+		</header>
+
+		<div class="w3-row w3-card-2">
+			<div onclick="Energy()" class=" w3-container w3-quarter  w3-button w3-hover-dark-grey">
+				<p>Monster Energy</p>
+			</div>
+
+			<div onclick="Rehab()" class=" w3-container w3-quarter  w3-button w3-hover-dark-grey">
+				<p>Monster Rehab</p>
+			</div>
+
+			<div onclick="Ultra()" class=" w3-container w3-quarter  w3-button w3-hover-dark-grey">
+				<p>Monster Ultra</p>
+			</div>
+
+			<div onclick="Extra()" class=" w3-container w3-quarter  w3-button w3-hover-dark-grey">
+				<p>Weiteres</p>
+			</div>
+		</div>
+
+		<!--Energy-->
+		<div id="energy" class="w3-row ">
+			<div style="width:20%" class="w3-container w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(1)" width="80%" class="zoom" src="img/energys/energy.png">
+
+			</div>
+
+			<div style="width:20%" class="w3-container w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(2)" width="80%" class="zoom" src="img/energys/zero.png">
+			</div>
+
+			<div style="width:20%" class="w3-container w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(3)" width="80%" class="zoom" src="img/energys/thedoctor.png">
+			</div>
+
+			<div style="width:20%" class="w3-container w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(4)" width="80%" class="zoom" src="img/energys/44.png">
+			</div>
+
+			<div style="width:20%" class="w3-container w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(5)" width="80%" class="zoom" src="img/energys/assault.png">
+			</div>
+		</div>
+
+		<!--Rehab-->
+		<div id="rehab" class="w3-row ">
+
+			<div class="w3-container w3-third w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(6)" width="45%" class="zoom" src="img/energys/lemontea.png">
+			</div>
+
+			<div class="w3-container w3-third w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(7)" width="45%" class="zoom" src="img/energys/greentea.png">
+			</div>
+
+			<div class="w3-container w3-third w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(8)" width="45%" class="zoom" src="img/energys/peachtea.png">
+			</div>
+		</div>
+
+		<!--Ultra-->
+		<div id="ultra" class="w3-row ">
+			<div style="width:20%" class="w3-container w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(9)" width="80%" class="zoom" src="img/energys/citron.png">
+			</div>
+
+			<div style="width:20%" class="w3-container w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(10)" width="80%" class="zoom" src="img/energys/violet.png">
+			</div>
+
+			<div style="width:20%" class="w3-container w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(11)" width="80%" class="zoom" src="img/energys/ultra.png">
+			</div>
+
+			<div style="width:20%" class="w3-container w3-center w3-col">
+				<img loading="lazy" onclick="hideandshow(12)" width="80%" class="zoom" src="img/energys/red.png">
+			</div>
+
+			<div style="width:20%" class="w3-container w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(13)" width="80%" class="zoom" src="img/energys/sunrise.png">
+			</div>
+		</div>
+
+		<!--Extra-->
+		<div id="extra" class="w3-row ">
+			<div class="w3-container w3-half w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(14)" width="30%" class="zoom" src="img/energys/mangoloco.png">
+			</div>
+
+			<div class="w3-container w3-half w3-center w3-col ">
+				<img loading="lazy" onclick="hideandshow(15)" style="padding-top: 1vw" width="30%" class="zoom" src="img/energys/pipeline.png">
+			</div>
+		</div>
+
+		<footer class="w3-container  footer">
+			<a class="w3-left" href="../../">
+				<p class="w3-hover-dark-grey w3-xlarge imp">HOME</p>
+			</a>
+			<a class="w3-left w3-padding" href="../rockstar/">
+				<img width="15%" class="" src="img/logo.png"></img>
+			</a>
+			<a class="w3-right" href="../../impressum.html">
+				<p class="w3-hover-dark-grey w3-xlarge imp">IMPRESSUM</p>
+			</a>
+		</footer>
+
+		<div id="id01" class="w3-modal">
+			<div class="w3-modal-content">
+				<div style="display: none" id="ID1" class="">
+					<header class="w3-container w3-dark-grey">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Energy - Original</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-green" href="https://www.monsterenergy.com/de/de/products/monster-energy/monster-energy">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID2" class="">
+					<header class="w3-container w3-dark-grey">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Energy - Absolute Zero</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-blue" href="https://www.monsterenergy.com/de/de/products/monster-energy/absolutely-zero">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID3" class="">
+					<header class="w3-container w3-yellow">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Energy - The Doctor</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-amber" href="https://www.monsterenergy.com/de/de/products/monster-energy/the-doctor">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID4" class="">
+					<header class="w3-container w3-win8-crimson">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Energy - Lewis Hamilton 44</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-black" href="https://www.monsterenergy.com/de/de/products/monster-energy/assault">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID5" class="">
+					<header class="w3-container w3-flat-pomegranate">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Energy - Assault</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-black" href="https://www.monsterenergy.com/de/de/products/monster-energy/lh44">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID6" class="">
+					<header class="w3-container w3-amber">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Rehab - Tea + Lemon + Energy</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-black" href="https://www.monsterenergy.com/de/de/products/monster-rehab/tea-lemonade">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID7" class="">
+					<header class="w3-container w3-green">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Rehab - Green Tea + Energy</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-black" href="https://www.monsterenergy.com/de/de/products/monster-rehab/green-tea">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID8" class="">
+					<header class="w3-container w3-flat-alizarin">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Rehab - Tea + Peach + Energy</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-black" href="https://www.monsterenergy.com/de/de/products/monster-rehab/rehab-peach-tea">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID9" class="">
+					<header class="w3-container w3-yellow">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Ultra - Ultra Citron</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-grey" href="https://www.monsterenergy.com/de/de/products/monster-ultra/ultra-citron">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID10" class="">
+					<header class="w3-container w3-flat-wisteria">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Ultra - Ultra Violet</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-grey" href="https://www.monsterenergy.com/de/de/products/monster-ultra/ultra-violet">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID11" class="">
+					<header class="w3-container w3-white">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Ultra - Ultra</h2>
+					</header>
+					<div class="w3-padding">
+						<a class="w3-button w3-grey" href="https://www.monsterenergy.com/de/de/products/monster-ultra/ultra">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" style="display: none" id="ID12" class="">
+					<header class="w3-container w3-red">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Ultra - Ultra Red</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-grey" href="https://www.monsterenergy.com/de/de/products/monster-ultra/ultra-red">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID13" class="">
+					<header class="w3-container w3-orange">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Monster Ultra - Ultra Sunrise</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-grey" href="https://www.monsterenergy.com/de/de/products/monster-ultra/ultra-sunrise">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID14" class="">
+					<header class="w3-container w3-flat-peter-river">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Juice Monster - Mango Loco</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-orange" href="https://www.monsterenergy.com/de/de/products/juice-monster/mango-loco">Visit Website</a>
+					</div>
+				</div>
+				<div style="display: none" id="ID15" class="">
+					<header class="w3-container w3-pink">
+						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<h2>Punch Monster - Pipeline Punch</h2>
+					</header>
+					<div class="w3-padding">
+					<a class="w3-button w3-pale-red" href="https://www.monsterenergy.com/de/de/products/punch-monster/pipeline-punch">Visit Website</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--mittlere Bildschirme-->
+
+
+	<!--kleine Bildschirme-->
+
+
+</body>
+
+</html>

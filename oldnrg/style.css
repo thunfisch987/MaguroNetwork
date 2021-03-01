@@ -1,0 +1,46 @@
+body {
+	background-color: white;
+	color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+		color: white;
+	}
+}
+
+#headerlarge {
+	font-family: 'Righteous', cursive;
+	font-size: 6vw;
+}
+
+
+#headermedium {
+	font-family: 'Righteous', cursive;
+	font-size: 9vw;
+}
+
+#headersmall {
+	font-family: 'Righteous', cursive;
+	font-size: 12vw;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.imp {
+	font-family: 'proxima_nova_ltsemibold', sans-serif;
+}
+
+pre {
+	font-family: Verdana;
+}
