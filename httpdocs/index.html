@@ -46,8 +46,6 @@
     <!--jQuery-->
     <script src="./jquery-3.6.0.min.js"></script>
     <script>
-    header("'Access-Control-Allow-Origin: http://littlebitgay.de'");
-    header('Access-Control-Allow-Headers: x-requested-with');
     $.get("https://cdn.phnx.xyz/js/maguroNav/navbar.html", function(data){
         $("#nav-placeholder").replaceWith(data);
     });
