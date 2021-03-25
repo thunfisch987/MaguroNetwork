@@ -49,18 +49,6 @@ div {
   }
 }
 
-#navtop {
-  height: 1px;
-  width: 100%;
-  background-color: #232323;
-}
-
-#navigationbar {
-  background-color: #232323;
-  top: 0;
-}
-
-
 /*@media-Zeug unnso*/
 @media (min-width: 768px) {
   #magnet {
