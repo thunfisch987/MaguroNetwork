@@ -46,7 +46,8 @@
     <!--jQuery-->
     <script src="./jquery-3.6.0.min.js"></script>
     <script>
-    $.get("https://cdn.phnx.xyz/js/maguroNav/navbar.html&callback=?", function(data){
+    var url = 'https://cdn.phnx.xyz/js/maguroNav/navbar.html&callback=?'
+    $.get(url, function(data){
         $("#nav-placeholder").replaceWith(data);
     });
     </script>
