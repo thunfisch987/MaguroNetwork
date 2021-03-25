@@ -1,0 +1,87 @@
+body, html {
+  background-image: url(../img/razer.gif);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div {
+  /*background-color: red;*/
+  /*border: 1px solid lime;*/
+}
+
+#greeting {
+  color: white;
+}
+
+#cookieNotice {
+}
+
+#cookieNoticeCloser {
+  cursor: pointer;
+  display: none;
+}
+
+#cookieNoticeCloser:before {
+  content: '';
+}
+
+#cookieNoticeCloser:after {
+  content: '';
+}
+
+#header {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 0;
+}
+
+#clock {
+  color: #17D4FE;
+}
+
+#headertext {
+  padding: 1rem;
+  margin-bottom: 0;
+  color: rgb(17,223,18);
+}
+
+/*@media-Zeug unnso*/
+@media (min-width: 768px) {
+  #magnet {
+    visibility: hidden;
+    color: rgb(17,223,18);
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transition: .5s;
+  }
+
+  #magnet.isSticky {
+    visibility: visible;
+    color: rgb(17,223,18);
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transition: .5s;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #header {
+    display: none;
+  }
+  #mobileheader{
+    display: block;
+  }
+  #navtop {
+    display: none;
+  }
+  #magnet {
+    visibility: visible;
+    color: rgb(17,223,18);
+  }
+}
