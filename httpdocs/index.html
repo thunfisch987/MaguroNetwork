@@ -47,7 +47,7 @@
     <script src="./jquery-3.6.0.min.js"></script>
     <script>
     var url = 'https://cdn.phnx.xyz/js/maguroNav/navbar.html&callback=?'
-    headers['Access-Control-Allow-Origin'] = "*"
+    $.support.cors = true
     $.get(url, function(data){
         $("#nav-placeholder").replaceWith(data);
     });
