@@ -1,3 +1,5 @@
+$( document ).ready( showTime );
+
 function showTime(){
     var date = new Date();
     var h = date.getHours(); // 0 - 23
@@ -11,5 +13,3 @@ function showTime(){
     setTimeout(showTime, 1000);
 
 }
-
-showTime();
