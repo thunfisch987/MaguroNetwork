@@ -10,7 +10,7 @@ const observer = new IntersectionObserver(
 
 observer.observe(stickyElm)*/
 
-$(document).ready(function() {
+function sticky() {
 	var observer = new IntersectionObserver(function(entries) {
 		// no intersection with screen
 		if(entries[0].intersectionRatio === 0)
@@ -21,4 +21,4 @@ $(document).ready(function() {
 	}, { threshold: [0,1] });
 
 	observer.observe(document.querySelector("#navtop"));
-});
+};

@@ -45,18 +45,10 @@
 
     <!--jQuery-->
     <script src="./jquery-3.6.0.min.js"></script>
-    <script>
-    var url = 'https://cdn.phnx.xyz/js/maguroNav/navbar.php'
-    $.support.cors = true
-    $.get(url, function(data){
-        $("#nav-placeholder").replaceWith(data);
-    });
-    </script>
 
     <!--"Own" CSS & JS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
-    <script src="https://cdn.phnx.xyz/js/maguroNav/navbar.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <!--Bootstrap 5 CSS & JS-->
@@ -95,7 +87,23 @@
     </div>
     <script src="assets/js/cookie.js" charset="utf-8"></script>
     <script src="assets/js/greeting.js" charset="utf-8"></script>
+    <script>
+    $.support.cors = true
+    $.ajax({
+      type: 'GET',
+      url: 'https://cdn.phnx.xyz/js/maguroNav/navbar.html',
+      success: function(data) {
+        $("#nav-placeholder").replaceWith(data);
+        navbar();
+        sticky();
+        showTime();
+      }
+    });
+    </script>
     <script src="assets/js/sticky.js" charset="utf-8"></script>
     <script src="assets/js/clock.js" charset="utf-8"></script>
+    <script src="https://cdn.phnx.xyz/js/maguroNav/navbar.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    </script>
   </body>
 </html>
