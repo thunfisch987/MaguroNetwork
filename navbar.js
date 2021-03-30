@@ -1,43 +1,24 @@
 var origin = window.location.origin
+var s = document.querySelector.bind(document)
+function sel(id) {
+  document.querySelector(id).classList.add("active")
+  document.querySelector(id).classList.add("disabled")
+}
 
-$(document).ready(function() {
-  if (origin == "https://littlebitgay.de") {
-    document.querySelector("#lbg").classList.add("active")
-    document.querySelector("#lbg").classList.add("disabled")
-  }
+function navbar() {
+  origin == "https://littlebitgay.de" && sel("#lbg")
 
-  if (origin == "https://weeb.littlebitgay.de") {
-    document.querySelector("#weeb").classList.add("active")
-    document.querySelector("#weeb").classList.add("disabled")
-  }
+  origin == "https://weeb.littlebitgay.de" && sel("#lbg")
 
-  if (origin == "https://nrg.littlebitgay.de") {
-    document.querySelector("#nrg").classList.add("active")
-    document.querySelector("#nrg").classList.add("disabled")
-  }
+  origin == "https://nrg.littlebitgay.de" && sel("#lbg")
 
-  if (origin == "https://r4e.littlebitgay.de") {
-    document.querySelector("#r4e").classList.add("active")
-    document.querySelector("#r4e").classList.add("disabled")
-  }
+  origin == "https://r4e.littlebitgay.de" && sel("#lbg")
 
-  if (origin == "https://veg.littlebitgay.de") {
-    document.querySelector("#veg").classList.add("active")
-    document.querySelector("#veg").classList.add("disabled")
-  }
+  origin == "https://veg.littlebitgay.de" && sel("#lbg")
 
-  if (origin == "https://rg.littlebitgay.de") {
-    document.querySelector("#rg").classList.add("active")
-    document.querySelector("#rg").classList.add("disabled")
-  }
+  origin == "https://rg.littlebitgay.de" && sel("#lbg")
 
-  if (origin == "https://rats.littlebitgay.de") {
-    document.querySelector("#rats").classList.add("active")
-    document.querySelector("#rats").classList.add("disabled")
-  }
+  origin == "https://rats.littlebitgay.de" && sel("#lbg")
 
-  if (origin == "http://127.0.0.1:3000") {
-    document.querySelector("#lbg").classList.add("active")
-    document.querySelector("#lbg").classList.add("disabled")
-  }
-});
+  origin == "http://127.0.0.1:62738/" && sel("#lbg")
+};
