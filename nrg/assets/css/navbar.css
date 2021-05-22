@@ -1,0 +1,10 @@
+#navtop {
+  height: 1px;
+  width: 100%;
+  background-color: #232323;
+}
+
+#navigationbar {
+  background-color: #232323;
+  top: 0;
+}

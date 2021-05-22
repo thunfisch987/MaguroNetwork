@@ -1,0 +1,4 @@
+# robots.txt zu https://nrg.littlebitgay.de
+
+User-agent: *
+Disallow: /assets/
