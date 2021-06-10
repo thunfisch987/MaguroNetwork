@@ -3,7 +3,29 @@ div {
   /*border: 1px solid lime;*/
 }
 
+a {
+  border: 1px solid red;
+}
+img {
+  border: 1px solid blue;
+}
+
+#monster, #rockstar {
+  opacity: 0.9;
+  background-color: black;
+  transition: 0.7s;
+}
+
+#monster:hover, #rockstar:hover {
+  opacity: 1;
+  background-color: #171717
+}
+
+#monsterhref, #rockstarhref {
+}
+
 #cookieNotice {
+  /**/
 }
 
 #cookieNoticeCloser {
