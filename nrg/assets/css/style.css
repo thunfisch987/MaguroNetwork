@@ -1,124 +1,174 @@
-div {
-  /*background-color: red;*/
-  /*border: 1px solid lime;*/
+.rights-tooltip {
+	text-decoration: italic;
+	cursor: help;
 }
 
-a {
-  border: 1px solid red;
-}
-img {
-  border: 1px solid blue;
+.rights-tooltip {
+	position: relative;
 }
 
-#monster, #rockstar {
-  opacity: 0.9;
-  background-color: black;
-  transition: 0.7s;
+span.rights-tooltip {
+	display: none;
 }
 
-#monster:hover, #rockstar:hover {
-  opacity: 1;
-  background-color: #171717
+span.rights-tooltip:hover {
+	display: block;
+	position: absolute;
+	bottom: 2em;
+	left: -6em;
+	width: 15em;
+	padding: 0.5em;
+	z-index: 100;
+	color: #000;
+	background-color: #ffebe6;
+	border: solid 1px #c32e04;
+	border-radius: 0.2em;
 }
 
-#monsterhref, #rockstarhref {
+#monster,
+#rockstar {
+	opacity: 0.9;
+	background-color: black;
+	transition: 0.7s;
 }
 
-#cookieNotice {
-  /**/
+#monster:hover,
+#rockstar:hover {
+	opacity: 1;
+	background-color: #171717;
 }
 
 #cookieNoticeCloser {
-  cursor: pointer;
-  display: none;
+	cursor: pointer;
+	display: none;
 }
 
 #cookieNoticeCloser:before {
-  content: '';
+	content: "";
 }
 
 #cookieNoticeCloser:after {
-  content: '';
+	content: "";
 }
 
 #header {
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  margin-bottom: 0;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	margin-bottom: 0;
 }
 
 #clock {
-  color: #17D4FE;
+	color: #17d4fe;
 }
 
 #headertext {
-  background: linear-gradient(to right, #ffd700, #bbff00 , #00ff2b, #00ffb7, #00ffff, #00feff, #00f4ff, #00e2ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding: 1rem;
-  margin-bottom: 0;
-  color: transparent;
-  animation: hue-rotate 6s linear infinite;
+	background: linear-gradient(
+		to right,
+		#ffd700,
+		#bbff00,
+		#00ff2b,
+		#00ffb7,
+		#00ffff,
+		#00feff,
+		#00f4ff,
+		#00e2ff
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 1rem;
+	margin-bottom: 0;
+	color: transparent;
+	animation: hue-rotate 6s linear infinite;
 }
 
 @keyframes hue-rotate {
-  0% {
-    filter:hue-rotate(0);
-  }
-  to {
-    filter:hue-rotate(-360deg);
-  }
+	0% {
+		filter: hue-rotate(0);
+	}
+	to {
+		filter: hue-rotate(-360deg);
+	}
 }
 
 /*@media-Zeug unnso*/
 @media (min-width: 768px) {
-  #magnet {
-    visibility: hidden;
-    background: linear-gradient(to right, #ffd700, #bbff00 , #00ff2b, #00ffb7, #00ffff, #00feff, #00f4ff, #00e2ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    animation-name: fadeOut, hue-rotate;
-    animation-duration: 1s, 6s;
-    animation-timing-function: linear, linear;
-    animation-iteration-count: 1, infinite;
-    transition: .5s;
-  }
+	#magnet {
+		visibility: hidden;
+		background: linear-gradient(
+			to right,
+			#ffd700,
+			#bbff00,
+			#00ff2b,
+			#00ffb7,
+			#00ffff,
+			#00feff,
+			#00f4ff,
+			#00e2ff
+		);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+		animation-name: fadeOut, hue-rotate;
+		animation-duration: 1s, 6s;
+		animation-timing-function: linear, linear;
+		animation-iteration-count: 1, infinite;
+		transition: 0.5s;
+	}
 
-  #magnet.isSticky {
-    visibility: visible;
-    background: linear-gradient(to right, #ffd700, #bbff00 , #00ff2b, #00ffb7, #00ffff, #00feff, #00f4ff, #00e2ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    animation: fadeIn, hue-rotate;
-    animation-duration: 1s, 6s;
-    animation-timing-function: linear, linear;
-    animation-iteration-count: 1, infinite;
-    transition: .5s;
-  }
+	#magnet.isSticky {
+		visibility: visible;
+		background: linear-gradient(
+			to right,
+			#ffd700,
+			#bbff00,
+			#00ff2b,
+			#00ffb7,
+			#00ffff,
+			#00feff,
+			#00f4ff,
+			#00e2ff
+		);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+		animation: fadeIn, hue-rotate;
+		animation-duration: 1s, 6s;
+		animation-timing-function: linear, linear;
+		animation-iteration-count: 1, infinite;
+		transition: 0.5s;
+	}
 }
 
 @media (max-width: 767.98px) {
-  #header {
-    display: none;
-  }
-  #mobileheader{
-    display: block;
-  }
-  #navtop {
-    display: none;
-  }
-  #magnet {
-    visibility: visible;
-    background: linear-gradient(to right, #ffd700, #bbff00 , #00ff2b, #00ffb7, #00ffff, #00feff, #00f4ff, #00e2ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    animation: hue-rotate 6s linear infinite;
-  }
+	#header {
+		display: none;
+	}
+	#mobileheader {
+		display: block;
+	}
+	#navtop {
+		display: none;
+	}
+	#magnet {
+		visibility: visible;
+		background: linear-gradient(
+			to right,
+			#ffd700,
+			#bbff00,
+			#00ff2b,
+			#00ffb7,
+			#00ffff,
+			#00feff,
+			#00f4ff,
+			#00e2ff
+		);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+		animation: hue-rotate 6s linear infinite;
+	}
 }

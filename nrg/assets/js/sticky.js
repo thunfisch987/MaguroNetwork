@@ -11,14 +11,23 @@ const observer = new IntersectionObserver(
 observer.observe(stickyElm)*/
 
 function sticky() {
-	var observer = new IntersectionObserver(function(entries) {
-		// no intersection with screen
-		if(entries[0].intersectionRatio === 0)
-			document.querySelector("#magnet").classList.add("isSticky");
-		// fully intersects with screen
-		else if(entries[0].intersectionRatio === 1)
-			document.querySelector("#magnet").classList.remove("isSticky");
-	}, { threshold: [0,1] });
+	if (!!document.getElementById("header") == true) {
+		var observer = new IntersectionObserver(
+			function (entries) {
+				// no intersection with screen
+				if (entries[0].intersectionRatio === 0)
+					document.querySelector("#magnet").classList.add("isSticky");
+				// fully intersects with screen
+				else if (entries[0].intersectionRatio === 1)
+					document
+						.querySelector("#magnet")
+						.classList.remove("isSticky");
+			},
+			{ threshold: [0, 1] }
+		);
 
-	observer.observe(document.querySelector("#navtop"));
-};
+		observer.observe(document.querySelector("#navtop"));
+	} else {
+		document.querySelector("#magnet").classList.add("isSticky");
+	}
+}
