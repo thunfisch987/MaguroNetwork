@@ -16,7 +16,7 @@ $.ajax({
           // will loop through 
           var images = $(this).attr("href");
   
-          $('<p></p>').html(images).appendTo('a div of your choice')
+          $('<p></p>').html(images).appendTo('divdiv')
   
        });
     }
