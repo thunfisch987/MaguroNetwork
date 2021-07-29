@@ -1,16 +1,27 @@
 <html>
 	<head>
-        <title>Just A Random Meme</title>
+		<title>Just A Random Meme</title>
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			crossorigin="anonymous"
 		></script>
-		
 	</head>
 	<body>
 		<img id="meme" alt="Here should be a meme" />
-        <div id="divdiv"></div>
-        <script src="randommemes.js"></script>
+		<script>
+            var fileNames = new Array();
+			$.ajax({
+				url: "memes/",
+				success: function (data) {
+					$(data)
+						.find("td > a")
+						.each(function () {
+							fileNames.push($(this).attr("href"));
+						});
+				},
+			});
+            console.log({fileNames})
+		</script>
 	</body>
 </html>
