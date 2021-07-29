@@ -17,6 +17,7 @@ $.ajax({
           var images = $(this).attr("href");
   
           $('<p></p>').html(images).appendTo('divdiv')
+          console.log(images)
   
        });
     }
