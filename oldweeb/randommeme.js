@@ -11,23 +11,36 @@
 // i = Math.floor(Math.random()*imgs.length);
 //  $('.el').append("<img src='"+path+imgs[i]+"'>").hide().fadeIn(2000);
 
-var allImages = [];
-$.ajax({
-	url: "memes/",
-	success: function (data) {
-		$(data);
-		console.log({data})
-			.find("td > a")
-			.each(function () {
+var allImages = new Array();
+// $.ajax({
+// 	url: "memes/",
+// 	success: function (data) {
+// 		$(data).find("td > a").each(function () {
+// 				console.log({ data });
+// 				// will loop through
+// 				// alert("Found a file: " + $(this).attr("href"));
+// 				console.log("%c this", "color:orange");
+// 				console.log(this);
+// 				console.log("%c $(this)", "color:red");
+// 				console.log($(this));
+// 				console.log("%c $(this).attr('href')", "color:green");
+// 				console.log($(this).attr("href"));
+// 				// allImages.push(data);
+// 			});
+// 	},
+// });
+
+$.get("memes/", function (data) {
+    console.log({ data });
+    $(data).find("td > a").each(function () {
 				// will loop through
 				// alert("Found a file: " + $(this).attr("href"));
-                console.log("%c this", "color:orange");
-				console.log({this});
-                console.log("%c $(this)", "color:red");
-				console.log({$(this)});
-                console.log("%c $(this).attr('href')", "color:green");
-				console.log({$(this).attr("href")});
+				console.log("%c this", "color:orange");
+				console.log(this);
+				console.log("%c $(this)", "color:red");
+				console.log($(this));
+				console.log("%c $(this).attr('href')", "color:green");
+				console.log($(this).attr("href"));
 				// allImages.push(data);
-			});
-	},
+    })
 });
