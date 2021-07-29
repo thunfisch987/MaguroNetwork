@@ -9,8 +9,9 @@
 	</head>
 	<body>
 		<img id="meme" alt="Here should be a meme" />
+		<button onclick="randomImage()"></button>
 		<script>
-            var fileNames = new Array();
+			var fileNames = new Array();
 			$.ajax({
 				url: "memes/",
 				success: function (data) {
@@ -21,7 +22,12 @@
 						});
 				},
 			});
-            console.log({fileNames})
+			fileNames.shift();
+			function randomImage() {
+				file = fileNames[Math.floor(Math.random() * fileNames.length)];
+				document.getElementById("meme").src = file;
+			}
+			randomImage()
 		</script>
 	</body>
 </html>
