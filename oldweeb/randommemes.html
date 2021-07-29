@@ -13,22 +13,25 @@
 		<img style="height: 500px" id="meme" alt="Here should be a meme" />		
 		<script>
 			var fileNames = new Array();
-			$.ajax({
-				url: "memes/",
-				success: function (data) {
-					$(data)
-						.find("td > a")
-						.each(function () {
-							fileNames.push($(this).attr("href"));
-						});
-				},
-			});
+			function getlist () {
+				$.ajax({
+					url: "memes/",
+					success: function (data) {
+						$(data)
+							.find("td > a")
+							.each(function () {
+								fileNames.push($(this).attr("href"));
+							});
+					},
+				});
+				randomImage();
+			}
 			fileNames.shift();
 			function randomImage() {
 				file = "memes/" + fileNames[Math.floor(Math.random() * fileNames.length)];
 				document.getElementById("meme").src = file;
 			}
-			window.onload = randomimage();
+			window.onload = getlist()
 		</script>
 	</body>
 </html>
