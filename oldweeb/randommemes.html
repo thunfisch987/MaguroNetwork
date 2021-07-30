@@ -13,10 +13,12 @@
 		></script>
 	</head>
 	<body>
-		<button style="z-index: 1; height: 40px; width: 40px" onclick="randomImage()">
-			New Image
-		</button>
-		<img style="z-index: -1; max-width:100%; max-height:100vh; width: auto; height: auto;" id="meme" alt="Here should be a meme" />
+		<div id="wrapper" style="text-align: center">
+			<button style="height: 40px; width: 40px; position:absolute; top: 50%" onclick="randomImage()">
+				New Image
+			</button>
+		</div>
+		<img style="max-width:100%; max-height:100vh; width: auto; height: auto;" id="meme" alt="Here should be a meme" />
 		<script>
 			var fileNames = new Array();
 
