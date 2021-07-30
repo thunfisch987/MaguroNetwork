@@ -12,6 +12,10 @@
 		<br>
 		<img style="height: 500px" id="meme" alt="Here should be a meme" />		
 		<script>
+			window.onload = ( function() {
+  				getlist();
+			})();
+			$when ( getlist() ).then( randomImage() );
 			var fileNames = new Array();
 			function getlist () {
 				$.ajax({
@@ -24,15 +28,11 @@
 							});
 					},
 				});
-				randomImage();
+				fileNames.shift();
 			}
-			fileNames.shift();
 			function randomImage() {
 				file = "memes/" + fileNames[Math.floor(Math.random() * fileNames.length)];
 				document.getElementById("meme").src = file;
-			};
-			window.onload = function () {
-				getlist();
 			};
 		</script>
 	</body>
