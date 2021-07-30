@@ -16,7 +16,7 @@
 			window.onload = (function () {
 				getlist();
 			})();
-			$when(getlist()).then( randomImage() );
+			$.when(getlist()).then( randomImage() );
 
 			function getlist() {
 				$.ajax({
