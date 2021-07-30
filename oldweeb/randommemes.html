@@ -10,14 +10,15 @@
 		></script>
 	</head>
 	<body>
-		<button style="height: 50vw" onclick="randomImage()">New Image</button>
+		<button style="height: 40px; width: 40px" onclick="randomImage()">New Image</button>
 		<br />
-		<img style="height: 50vw" id="meme" alt="Here should be a meme" />
+		<img id="meme" alt="Here should be a meme" />
 		<script>
 			var fileNames = new Array();
 			window.onload = (function () {
 				getlist();
 			})();
+			$.when(getlist()).then( randomImage() );
 
 			function getlist() {
 				$.ajax({
@@ -31,7 +32,6 @@
 					},
 				});
 				fileNames.shift();
-				console.log({fileNames})
 			}
 			function randomImage() {
 				file =
