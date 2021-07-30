@@ -9,15 +9,16 @@
 	</head>
 	<body>
 		<button onclick="randomImage()">New Image</button>
-		<br>
-		<img style="height: 500px" id="meme" alt="Here should be a meme" />		
+		<br />
+		<img style="height: 500px" id="meme" alt="Here should be a meme" />
 		<script>
-			window.onload = ( function() {
-  				getlist();
+			window.onload = (function () {
+				var fileNames = new Array();
+				getlist();
 			})();
-			$when ( getlist() ).then( randomImage() );
-			var fileNames = new Array();
-			function getlist () {
+			$when(getlist()).then( randomImage() );
+
+			function getlist() {
 				$.ajax({
 					url: "memes/",
 					success: function (data) {
@@ -31,9 +32,11 @@
 				fileNames.shift();
 			}
 			function randomImage() {
-				file = "memes/" + fileNames[Math.floor(Math.random() * fileNames.length)];
+				file =
+					"memes/" +
+					fileNames[Math.floor(Math.random() * fileNames.length)];
 				document.getElementById("meme").src = file;
-			};
+			}
 		</script>
 	</body>
 </html>
