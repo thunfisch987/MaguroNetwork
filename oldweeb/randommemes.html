@@ -30,8 +30,10 @@
 			function randomImage() {
 				file = "memes/" + fileNames[Math.floor(Math.random() * fileNames.length)];
 				document.getElementById("meme").src = file;
-			}
-			window.onload = getlist()
+			};
+			window.onload = function () {
+				getlist();
+			};
 		</script>
 	</body>
 </html>
