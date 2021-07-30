@@ -12,8 +12,8 @@
 		<br />
 		<img style="height: 500px" id="meme" alt="Here should be a meme" />
 		<script>
+			var fileNames = new Array();
 			window.onload = (function () {
-				var fileNames = new Array();
 				getlist();
 			})();
 			$when(getlist()).then( randomImage() );
