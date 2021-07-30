@@ -1,8 +1,11 @@
 <html>
 	<head>
 		<title>Just A Random Meme</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -10,29 +13,29 @@
 		></script>
 	</head>
 	<body>
-		<button style="height: 40px; width: 40px" onclick="randomImage()">New Image</button>
+		<button style="height: 40px; width: 40px" onclick="randomImage()">
+			New Image
+		</button>
 		<br />
 		<img id="meme" alt="Here should be a meme" />
 		<script>
 			var fileNames = new Array();
-			window.onload = (function () {
-				getlist();
-			})();
-			$.when(getlist()).then( randomImage() );
 
-			function getlist() {
-				$.ajax({
-					url: "memes/",
-					success: function (data) {
-						$(data)
-							.find("td > a")
-							.each(function () {
-								fileNames.push($(this).attr("href"));
-							});
-					},
-				});
-				fileNames.shift();
-			}
+			$.ajax({
+				url: "memes/",
+				success: function (data) {
+					$(data)
+						.find("td > a")
+						.each(function () {
+							fileNames.push($(this).attr("href"));
+						});
+				},
+				complete: function (data) {
+					fileNames.shift();
+					randomImage();
+				},
+			});
+			
 			function randomImage() {
 				file =
 					"memes/" +
