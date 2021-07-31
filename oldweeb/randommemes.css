@@ -1,0 +1,32 @@
+body {
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+#reloadbutton {
+	color: white;
+	border: none;
+	background-color: #4caf50;
+	height: 100px;
+	width: 200px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	opacity: 0.5;
+}
+
+#reload {
+	font-family: Lucida Sans Unicode;
+	font-size: 3em;
+}
+
+#meme {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	max-height: 100vh;
+	width: auto;
+	height: auto;
+}
