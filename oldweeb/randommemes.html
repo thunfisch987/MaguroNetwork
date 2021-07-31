@@ -4,14 +4,17 @@
 		<meta charset="utf-8" />
 		<meta property="og:title" content="RandomMemes by Thun" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://oldweeb.littlebitgay.de/randommemes.html" />
+		<meta
+			property="og:url"
+			content="https://oldweeb.littlebitgay.de/randommemes.html"
+		/>
 		<meta property="og:site_name" content="RandomMemes by Thun" />
-		<meta property="og:description"content="!!! MIGHT BE CURSED !!!" />
+		<meta property="og:description" content="!!! MIGHT BE CURSED !!!" />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
-        <link rel="stylesheet" type="text/css" href="randommemes.css?rnd=2">
+		<link rel="stylesheet" type="text/css" href="randommemes.css?rnd=2" />
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -19,10 +22,13 @@
 		></script>
 	</head>
 	<body>
-		<button id="reloadbutton" onclick="randomImage()">
-			<span id="reload">&#x21bb;<span>New Image
-		</button>
 		<img id="meme" alt="Here should be a meme" />
+		<button id="uploadbutton" onclick="window.close()">
+			<span id="uploadspan">&#8593; Upload Image</span>
+		</button>
+		<button id="reloadbutton" onclick="randomImage()">
+			<span id="reloadspan">&#x21bb; New Image</span>
+		</button>
 		<script>
 			var fileNames = new Array();
 

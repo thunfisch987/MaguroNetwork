@@ -2,21 +2,42 @@ body {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
+	background-color: #2c2f33;
+}
+
+#reloadbutton,
+#uploadbutton {
+	color: white;
+	border: none;
+	height: auto;
+	width: 50vw;
+	position: fixed;
+	opacity: 0.7;
+}
+
+#reloadbutton:hover,
+#uploadbutton:hover {
+	opacity: 0.9;
 }
 
 #reloadbutton {
-	color: white;
-	border: none;
-	background-color: #4caf50;
-	height: 100px;
-	width: 200px;
-	position: fixed;
+	background-color: #5865f2;
 	bottom: 0;
 	right: 0;
-	opacity: 0.5;
 }
 
-#reload {
+#uploadbutton {
+	background-color: #4caf50;
+	bottom: 0;
+	left: 0;
+}
+
+#reloadspan {
+	font-family: Lucida Sans Unicode;
+	font-size: 3em;
+}
+
+#uploadspan {
 	font-family: Lucida Sans Unicode;
 	font-size: 3em;
 }
