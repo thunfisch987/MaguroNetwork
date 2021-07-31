@@ -22,13 +22,30 @@
 		></script>
 	</head>
 	<body>
+		<!-- Age Verification -->
+		<div id="age">
+			<h3>Age Verification</h3>
+			<hr />
+			<p>
+				Some memes on this website might be NSFW, continue with caution.
+			</p>
+			<div id="agebuttons">
+				<button id="enter" onclick="enter()">Enter</button>
+				<br />
+				<p></p>
+				<br />
+				<button id="exit" onclick="exit()">Exit</button>
+			</div>
+		</div>
 		<img id="meme" alt="Here should be a meme" />
-		<button id="uploadbutton" onclick="window.close()">
-			<span id="uploadspan">&#8593; Upload Image</span>
-		</button>
-		<button id="reloadbutton" onclick="randomImage()">
-			<span id="reloadspan">&#x21bb; New Image</span>
-		</button>
+		<div id="buttondiv">
+			<button id="uploadbutton" onclick="uploadImage()">
+				<span id="uploadspan">&#8593; Upload Image</span>
+			</button>
+			<button id="reloadbutton" onclick="randomImage()">
+				<span id="reloadspan">&#x21bb; New Image</span>
+			</button>
+		</div>
 		<script>
 			var fileNames = new Array();
 
@@ -52,6 +69,28 @@
 					"memes/" +
 					fileNames[Math.floor(Math.random() * fileNames.length)];
 				document.getElementById("meme").src = file;
+			}
+
+			function enter() {
+				document.cookie =
+					"ageverify=1; SameSite=Lax; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+				document.getElementById("age").style.display = "none";
+				document.getElementById("meme").style.display = "block";
+				document.getElementById("buttondiv").style.display = "block";
+			}
+
+			if (document.cookie.indexOf("ageverify=1") != -1) {
+				document.getElementById("age").style.display = "none";
+				document.getElementById("meme").style.display = "block";
+				document.getElementById("buttondiv").style.display =
+					"inline-block";
+			} else {
+				// jQuery("#cookieNotice").prependTo("body");
+				// jQuery("#cookieNoticeCloser").show();
+			}
+
+			function exit() {
+				window.location.href = "https://littlebitgay.de";
 			}
 		</script>
 	</body>
