@@ -74,6 +74,7 @@ hr {
 
 #reloadbutton,
 #uploadbutton {
+	text-align: center;
 	display: inline-block;
 	color: white;
 	border: none;
