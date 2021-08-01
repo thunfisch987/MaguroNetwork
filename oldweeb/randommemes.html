@@ -136,7 +136,7 @@
 
 			$("#downloadbutton").attr({
 				target: "_blank",
-				href: "https://oldweeb.littlebitgay.de/" + meme_elem.src,
+				href: meme_elem.src,
 			});
 
 			function enter() {
@@ -166,6 +166,8 @@
 					"memes/" +
 					fileNames[Math.floor(Math.random() * fileNames.length)];
 				meme_elem.src = file;
+				console.log(file);
+				console.log(meme_elem.src);
 			}
 		</script>
 	</body>
