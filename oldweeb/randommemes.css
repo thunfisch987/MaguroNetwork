@@ -2,58 +2,7 @@ body {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
-	background-color: #2c2f33;
-}
-
-/* Age Verification */
-#age {
-	color: #cfcfcf;
-	background-color: #4b0404;
-	margin: 25vh;
-	margin-top: 33.3vh;
-	margin-bottom: 33.3vh;
-	text-align: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-}
-
-hr {
-	color: red;
-	background-color: red;
-}
-
-#agebuttons {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-#enter,
-#exit {
-	margin-left: 25%;
-	margin-right: 25%;
-	border: none;
-	width: 50%;
-	height: auto;
-	font-size: 2em;
-	opacity: 0.9;
-}
-
-#enter:hover,
-#exit:hover {
-	opacity: 1;
-}
-
-#enter {
-	background-color: #4caf50;
-}
-
-#exit {
-	background-color: #cf6d1d;
+	background-color: #2c2f33 !important;
 }
 
 /* Content */
@@ -66,47 +15,4 @@ hr {
 	max-height: 100vh;
 	width: auto;
 	height: auto;
-}
-
-#buttondiv {
-	display: none;
-}
-
-#reloadbutton,
-#uploadbutton {
-	text-align: center;
-	display: inline-block;
-	color: white;
-	border: none;
-	height: auto;
-	width: 50vw;
-	position: fixed;
-	opacity: 0.7;
-}
-
-#reloadbutton:hover,
-#uploadbutton:hover {
-	opacity: 0.9;
-}
-
-#reloadbutton {
-	background-color: #5865f2;
-	bottom: 0;
-	right: 0;
-}
-
-#uploadbutton {
-	background-color: #4caf50;
-	bottom: 0;
-	left: 0;
-}
-
-#reloadspan {
-	font-family: Lucida Sans Unicode;
-	font-size: 3em;
-}
-
-#uploadspan {
-	font-family: Lucida Sans Unicode;
-	font-size: 3em;
 }
