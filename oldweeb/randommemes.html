@@ -114,8 +114,8 @@
 			var meme_elem = document.getElementById("meme");
 			var btndiv_elem = document.getElementById("btndiv");
 			var downloadbutton = document.getElementById("downloadbutton");
-			// const url = new URL(window.location);
 			const params = new URLSearchParams(location.search);
+			var file = new String();
 
 			document.onkeyup = function (event) {
 				if (event.keyCode === 13) {
@@ -135,6 +135,11 @@
 				complete: function (data) {
 					fileNames.shift();
 					//console.log({ fileNames });
+					if (params.has("id")) {
+						displayImage(params.get("id"));
+					} else {
+						randomImage();
+					}
 					//randomImage();
 				},
 			});
@@ -165,15 +170,18 @@
 				window.location.href = "https://littlebitgay.de";
 			}
 
-			file = new String();
-			function randomImage() {
-				randomnumber = Math.floor(Math.random() * fileNames.length);
-				console.log(randomnumber);
-				file = "memes/" + fileNames[randomnumber];
+			function displayImage(id) {
+				file = "memes/" + fileNames[id];
 				meme_elem.src = file;
+			}
+
+			function randomImage() {
+				randomid = Math.floor(Math.random() * fileNames.length);
+				console.log(randomid);
+				displayimage(randomid);
 				console.log(file);
 				console.log(meme_elem.src);
-				params.set("id", randomnumber);
+				params.set("id", randomid);
 				newurl = location.pathname + "?" + params;
 				window.history.replaceState({}, "", newurl);
 				downloadbutton.setAttribute("download", file);
