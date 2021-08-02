@@ -70,6 +70,7 @@
 					class="col btn btn-success btn-lg btn-block fs-2"
 					style="border-radius: 0 !important; opacity: 0.7 !important"
 					id="downloadbutton"
+					download=""
 				>
 					&#129047; Download Image
 				</a>
@@ -112,6 +113,8 @@
 			var age_elem = document.getElementById("age");
 			var meme_elem = document.getElementById("meme");
 			var btndiv_elem = document.getElementById("btndiv");
+			var downloadbutton = document.getElementById("downloadbutton");
+
 			document.onkeyup = function (event) {
 				if (event.keyCode === 13) {
 					randomImage();
@@ -168,6 +171,8 @@
 				meme_elem.src = file;
 				console.log(file);
 				console.log(meme_elem.src);
+				downloadbutton.setAttribute("download", file);
+				downloadbutton.setAttribute("href", file);
 			}
 		</script>
 	</body>
