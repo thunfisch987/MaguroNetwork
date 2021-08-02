@@ -114,6 +114,8 @@
 			var meme_elem = document.getElementById("meme");
 			var btndiv_elem = document.getElementById("btndiv");
 			var downloadbutton = document.getElementById("downloadbutton");
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
 
 			document.onkeyup = function (event) {
 				if (event.keyCode === 13) {
@@ -165,12 +167,12 @@
 
 			file = new String();
 			function randomImage() {
-				file =
-					"memes/" +
-					fileNames[Math.floor(Math.random() * fileNames.length)];
+				randomnumber = Math.floor(Math.random() * fileNames.length);
+				file = "memes/" + fileNames[randomnumber];
 				meme_elem.src = file;
 				console.log(file);
 				console.log(meme_elem.src);
+				urlParams.set("id", randomnumber.toString);
 				downloadbutton.setAttribute("download", file);
 				downloadbutton.setAttribute("href", file);
 			}
