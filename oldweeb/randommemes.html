@@ -114,8 +114,8 @@
 			var meme_elem = document.getElementById("meme");
 			var btndiv_elem = document.getElementById("btndiv");
 			var downloadbutton = document.getElementById("downloadbutton");
-			const queryString = window.location.search;
-			const urlParams = new URLSearchParams(queryString);
+			// const url = new URL(window.location);
+			const params = new URLSearchParams(location.search);
 
 			document.onkeyup = function (event) {
 				if (event.keyCode === 13) {
@@ -135,7 +135,7 @@
 				complete: function (data) {
 					fileNames.shift();
 					//console.log({ fileNames });
-					randomImage();
+					//randomImage();
 				},
 			});
 
@@ -173,7 +173,9 @@
 				meme_elem.src = file;
 				console.log(file);
 				console.log(meme_elem.src);
-				urlParams.set("id", randomnumber.toString);
+				params.set("id", randomnumber);
+				newurl = location.pathname + "?" + params;
+				window.history.replaceState({}, "", newurl);
 				downloadbutton.setAttribute("download", file);
 				downloadbutton.setAttribute("href", file);
 			}
