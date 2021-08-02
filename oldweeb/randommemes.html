@@ -168,6 +168,7 @@
 			file = new String();
 			function randomImage() {
 				randomnumber = Math.floor(Math.random() * fileNames.length);
+				console.log(randomnumber);
 				file = "memes/" + fileNames[randomnumber];
 				meme_elem.src = file;
 				console.log(file);
