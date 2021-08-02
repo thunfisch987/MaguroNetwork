@@ -16,3 +16,25 @@ body {
 	width: auto;
 	height: auto;
 }
+
+#svgfill {
+	fill: white;
+}
+
+#uploadtext {
+	display: none;
+	animation: fadeIn;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	transition: 0.5s;
+}
+
+#upload:hover > #uploadtext {
+	display: inline;
+	animation: fadeIn;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	transition: 0.5s;
+}

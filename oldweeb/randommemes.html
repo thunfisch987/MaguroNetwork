@@ -16,6 +16,10 @@
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
 		<link rel="stylesheet" type="text/css" href="randommemes.css?rnd=9" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -56,9 +60,30 @@
 		</div>
 
 		<!-- Meme -->
-		<img id="meme" alt="Here should be a meme" />
+		<img style="color: white" id="meme" alt="Here should be a meme" />
 
 		<!-- Buttons -->
+		<div
+			id="upload"
+			class="btn btn-success position-absolute top-0 end-0 text-white h3"
+			style="opacity: 0.7"
+		>
+			<svg
+				width="24"
+				height="24"
+				xmlns="http://www.w3.org/2000/svg"
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+			>
+				<path
+					id="svgfill"
+					d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"
+				/>
+			</svg>
+			<span id="uploadtext"
+				><a href="" class="link-light">Upload</a></span
+			>
+		</div>
 		<div
 			id="btndiv"
 			class="footer fixed-bottom text-center text-white"
