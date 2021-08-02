@@ -134,7 +134,6 @@
 				},
 				complete: function (data) {
 					fileNames.shift();
-					//console.log({ fileNames });
 					if (params.has("id")) {
 						displayImage(params.get("id"));
 					} else {
@@ -177,10 +176,7 @@
 
 			function randomImage() {
 				randomid = Math.floor(Math.random() * fileNames.length);
-				console.log(randomid);
 				displayImage(randomid);
-				console.log(file);
-				console.log(meme_elem.src);
 				params.set("id", randomid);
 				newurl = location.pathname + "?" + params;
 				window.history.replaceState({}, "", newurl);
