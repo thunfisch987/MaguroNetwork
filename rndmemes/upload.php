@@ -23,10 +23,10 @@ if (file_exists($target_file)) {
 }
 
 // Check file size
-if ($_FILES["UploadButton"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
+// if ($_FILES["UploadButton"]["size"] > 500000) {
+//     echo "Sorry, your file is too large.";
+//     $uploadOk = 0;
+// }
 
 // Allow certain file formats
 if (
