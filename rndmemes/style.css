@@ -2,31 +2,40 @@ body {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
+	background-color: #2c2f33 !important;
+	font-family: "Droid Sans" !important;
 }
 
-#reloadbutton {
-	color: white;
-	border: none;
-	background-color: #4caf50;
-	height: 100px;
-	width: 200px;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	opacity: 0.5;
-}
-
-#reload {
-	font-family: Lucida Sans Unicode;
-	font-size: 3em;
-}
+/* Content */
 
 #meme {
-	display: block;
+	display: none;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100%;
 	max-height: 100vh;
 	width: auto;
 	height: auto;
+}
+
+#svgfill {
+	fill: white;
+}
+
+#uploadtext {
+	display: none;
+	animation: fadeIn;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	transition: 0.5s;
+}
+
+#upload:hover > #uploadtext {
+	display: inline;
+	animation: fadeIn;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	transition: 0.5s;
 }
