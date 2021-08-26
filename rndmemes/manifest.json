@@ -23,6 +23,12 @@
 			"src": "loadcat192.png",
 			"sizes": "192x192",
 			"type": "image/png"
+		},
+		{
+			"src": "path/to/maskable_icon.png",
+			"sizes": "190x190",
+			"type": "image/png",
+			"purpose": "any maskable"
 		}
 	]
 }
