@@ -6,5 +6,11 @@
 	"background_color": "#2c2f33",
 	"description": "Just Random Memes...",
 	"orientation": "portrait-primary",
-	"icons": []
+	"icons": [
+		{
+			"src": "loadcat.png",
+			"sizes": "190x190",
+			"type": "image/png"
+		}
+	]
 }
