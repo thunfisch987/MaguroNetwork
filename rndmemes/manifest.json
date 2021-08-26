@@ -10,22 +10,22 @@
 	"prefer-related-application": false,
 	"icons": [
 		{
-			"src": "loadcat.png",
+			"src": "./assets/img/icons/loadcat.png",
 			"sizes": "190x190",
 			"type": "image/png"
 		},
 		{
-			"src": "loadcat512.png",
+			"src": "./assets/img/icons/loadcat512.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		},
 		{
-			"src": "loadcat192.png",
+			"src": "./assets/img/icons/loadcat192.png",
 			"sizes": "192x192",
 			"type": "image/png"
 		},
 		{
-			"src": "path/to/maskable_icon.png",
+			"src": "./assets/img/icons/maskable_icon.png",
 			"sizes": "190x190",
 			"type": "image/png",
 			"purpose": "any maskable"
