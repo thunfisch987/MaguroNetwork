@@ -38,16 +38,18 @@
 			}
 		</script>
 		<link rel="stylesheet" type="text/css" href="style.css?rnd=12" />
+		<link rel="stylesheet" type="text/css" href="font.css" />
 		<link
-			href="http://fonts.googleapis.com/css?family=Droid+Sans"
-			rel="stylesheet"
-			defer
+			rel="preload"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
 		/>
-		<link
+		<!-- <link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 			defer
-		/>
+		/> -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -55,18 +57,33 @@
 			async
 		></script>
 		<link
+			rel="preload"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+			crossorigin
+		/>
+		<!-- <link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
 			crossorigin="anonymous"
 			defer
-		/>
+		/> -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
 			crossorigin="anonymous"
 			async
 		></script>
+		<style type="text/css">
+			body {
+				height: 100vh;
+				padding: 0;
+				margin: 0;
+				background-color: #2c2f33 !important;
+			}
+		</style>
 	</head>
-	<body style="background-color: #2c2f33">
+	<body>
 		<!-- Age Verification -->
 		<div
 			class="
