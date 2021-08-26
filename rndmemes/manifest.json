@@ -1,0 +1,10 @@
+{
+	"name": "RandomMemes",
+	"short_name": "RandomMemes",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#2c2f33",
+	"description": "Just Random Memes...",
+	"orientation": "portrait-primary",
+	"icons": []
+}
