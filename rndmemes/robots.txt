@@ -1,0 +1,4 @@
+# robots.txt zu https://rndmemes.littlebitgay.de
+
+User-agent: *
+Disallow: /memes/
