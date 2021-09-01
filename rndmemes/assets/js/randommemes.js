@@ -6,6 +6,7 @@ var btndiv_elem = document.getElementById("btndiv");
 var downloadbutton = document.getElementById("downloadbutton");
 const params = new URLSearchParams(location.search);
 var file = "";
+var hidebutton = document.getElementById("hide").classList;
 
 document.onkeyup = function (event) {
 	if (event.key !== undefined) {
@@ -73,4 +74,23 @@ function randomImage() {
 	randomid = Math.floor(Math.random() * fileNames.length);
 	displayImage(randomid);
 	params.set("id", randomid);
+}
+
+function togglehide() {
+	const uploadbutton = document.getElementById("upload");
+	const downloadbutton = document.getElementById("downloadbutton");
+	const randombutton = document.getElementById("randombutton");
+	if (hidebutton.contains("bi-eye-fill")) {
+		hidebutton.replace("bi-eye-fill", "bi-eye-slash-fill");
+		uploadbutton.hidden = true;
+		downloadbutton.hidden = true;
+		randombutton.hidden = true;
+	} else if (hidebutton.contains("bi-eye-slash-fill")) {
+		hidebutton.replace("bi-eye-slash-fill", "bi-eye-fill");
+		uploadbutton.hidden = false;
+		downloadbutton.hidden = false;
+		randombutton.hidden = false;
+	} else {
+		console.log("Error");
+	}
 }
