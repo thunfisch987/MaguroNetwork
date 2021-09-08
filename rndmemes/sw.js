@@ -5,10 +5,16 @@ var fetchdata;
 var memecache = [];
 fetch("memes/")
 	.then((text) => text.text())
-	.then(function (data) {
-		data.find("td > a").each(function (filename) {
-			dat;
-		});
+	.then(function (html) {
+		var parser = new DOMParser();
+		var doc = parser.parseFromString(html, "text/html");
+		var elems = doc.querySelectorAll("td > a");
+		elems.forEach((a) => memecache.push(a.href));
+		console.log(memecache);
+	})
+	.catch(function (err) {
+		// There was an error
+		console.warn("Something went wrong.", err);
 	});
 // {
 // responsetext
