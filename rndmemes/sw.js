@@ -1,8 +1,16 @@
+/*jshint esversion: 6 */
 console.log("Hello from your Service Worker :P");
 var cacheName = "rndmemes";
-fetch("memes/").then(function (response) {
-	console.log(response);
-});
+var memecache = [];
+fetch("memes/")
+	.then((response) => response.text())
+	.then(console.log);
+// {
+// 	response.find("td > a").each(function (filename) {
+// 		memecache.push(filename.attr("href"));
+// 	});
+// });
+
 var filesToCache = [
 	"/",
 	"/index.html",
