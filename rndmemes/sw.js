@@ -5,7 +5,9 @@ var memecache = [];
 fetch("memes/")
 	.then((text) => text.text())
 	.then(function (data) {
-		console.log(data);
+		data.find("td > a").each(function (filename) {
+			memecache.push(filename.attr("href"));
+		});
 	});
 // {
 // responsetext
