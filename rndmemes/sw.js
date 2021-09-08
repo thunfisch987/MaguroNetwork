@@ -1,6 +1,8 @@
 console.log("Hello from your Service Worker :P");
 var cacheName = "rndmemes";
-console.log(fileNames[1]);
+fetch("memes/").then(function (response) {
+	console.log(response);
+});
 var filesToCache = [
 	"/",
 	"/index.html",
