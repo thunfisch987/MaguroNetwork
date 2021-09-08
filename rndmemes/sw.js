@@ -2,16 +2,16 @@
 console.log("Hello from your Service Worker :P");
 var cacheName = "rndmemes";
 var memecache = [];
-fetch("memes/").then(
-	(response) =>
-		(responsetext = response.text().then(
-			responsetext
-				.find("td > a")
-				.each((filename) => memecache.push(filename.attr("href")))
-				.then(console.log)
-		))
-);
+fetch("memes/")
+	.then((text) => text.text())
+	.then(function (data) {
+		console.log(data);
+	});
 // {
+// responsetext
+// 	.find("td > a")
+// 	.each((filename) => memecache.push(filename.attr("href")))
+// 	.then(console.log)
 // 	response.find("td > a").each(function (filename) {
 // 		memecache.push(filename.attr("href"));
 // 	});
