@@ -1,12 +1,13 @@
 /*jshint esversion: 6 */
 console.log("Hello from your Service Worker :P");
 var cacheName = "rndmemes";
+var fetchdata;
 var memecache = [];
 fetch("memes/")
 	.then((text) => text.text())
 	.then(function (data) {
 		data.find("td > a").each(function (filename) {
-			memecache.push(filename.attr("href"));
+			dat;
 		});
 	});
 // {

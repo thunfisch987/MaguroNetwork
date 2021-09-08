@@ -19,6 +19,7 @@ document.onkeyup = function (event) {
 $.ajax({
 	url: "memes/",
 	success: function (data) {
+		console.log(typeof data);
 		$(data)
 			.find("td > a")
 			.each(function () {
