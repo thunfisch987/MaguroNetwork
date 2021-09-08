@@ -3,11 +3,11 @@ console.log("Hello from your Service Worker :P");
 var cacheName = "rndmemes";
 var memecache = [];
 fetch("memes/").then((response) =>
-	response
-		.text()
-		.find("td > a")
-		.each((filename) => memecache.push(filename.attr("href")))
-		.then(console.log)
+	response.text().then(
+		find("td > a")
+			.each((filename) => memecache.push(filename.attr("href")))
+			.then(console.log)
+	)
 );
 // {
 // 	response.find("td > a").each(function (filename) {
