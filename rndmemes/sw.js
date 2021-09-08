@@ -1,11 +1,12 @@
 console.log("Hello from your Service Worker :P");
 var cacheName = "rndmemes";
+console.log(fileNames[1]);
 var filesToCache = [
 	"/",
 	"/index.html",
-	"/style.css",
-	"/font.css",
-	"/randommemes.js",
+	"/assets/css/style.css",
+	"//assets/js/randommemes.js",
+	"/memes/",
 ];
 
 /* Start the service worker and cache all of the app's content */
