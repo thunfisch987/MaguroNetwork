@@ -1,21 +1,24 @@
 /*jshint esversion: 6 */
 console.log("Hello from your Service Worker :P");
-var cacheName = "rndmemes";
-var fetchdata;
-var memecache = [];
-fetch("memes/")
-	.then((text) => text.text())
-	.then(function (html) {
-		var parser = new DOMParser();
-		var doc = parser.parseFromString(html, "text/html");
-		var elems = doc.querySelectorAll("td > a");
-		elems.forEach((a) => memecache.push(a.href));
-		console.log(memecache);
-	})
-	.catch(function (err) {
-		// There was an error
-		console.warn("Something went wrong.", err);
-	});
+const fs = require("fs");
+memes = fs.readdir("memes/");
+console.log(memes);
+// var cacheName = "rndmemes";
+// var fetchdata;
+// var memecache = [];
+// fetch("memes/")
+// 	.then((text) => text.text())
+// 	.then(function (html) {
+// 		var parser = new DOMParser();
+// 		var doc = parser.parseFromString(html, "text/html");
+// 		var elems = doc.querySelectorAll("td > a");
+// 		elems.forEach((a) => memecache.push(a.href));
+// 		console.log(memecache);
+// 	})
+// 	.catch(function (err) {
+// 		// There was an error
+// 		console.warn("Something went wrong.", err);
+// 	});
 // {
 // responsetext
 // 	.find("td > a")
