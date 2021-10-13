@@ -25,12 +25,12 @@ span.rights-tooltip:hover {
 	border-radius: 0.2em;
 }
 
-#monster,
+/* #monster,
 #rockstar {
 	opacity: 0.9;
 	background-color: black;
 	transition: 0.7s;
-}
+} */
 
 #monster:hover,
 #rockstar:hover {
