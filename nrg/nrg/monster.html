@@ -123,6 +123,74 @@
 					<p class="lead" id="greeting">Good Day!</p>
 				</div>
 			</div>
+			<div class="row">
+				<div id="classic" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-success energys"
+						onclick="showcans(this)"
+						data-toggletype="classic"
+					>
+						Classic Monster
+					</button>
+				</div>
+				<div id="juiced" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-danger energys"
+						onclick="showcans(this)"
+						data-toggletype="juiced"
+					>
+						Monster Juiced
+					</button>
+				</div>
+				<div id="ultra" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-warning energys"
+						onclick="showcans(this)"
+						data-toggletype="ultra"
+					>
+						Monster Ultra
+					</button>
+				</div>
+				<div id="rehab" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-info energys"
+						onclick="showcans(this)"
+						data-toggletype="rehab"
+					>
+						Monster Rehab
+					</button>
+				</div>
+			</div>
+			<div id="classicdiv">
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+			</div>
+			<div id="juiceddiv">
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+			</div>
+			<div id="ultradiv">
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+			</div>
+			<div id="rehabdiv">
+				<div class="col text-center text-white"></div>
+				<div class="col text-center text-white"></div>
+			</div>
 		</div>
 		<!--<div class="container" style="height: 5000px;">
 
@@ -163,6 +231,72 @@
 					tooltiplistener();
 				}
 			);
+		</script>
+		<script type="text/javascript">
+			var classicdiv = document.getElementById("classicdiv");
+			var juiceddiv = document.getElementById("juiceddiv");
+			var ultradiv = document.getElementById("ultradiv");
+			var rehabdiv = document.getElementById("rehabdiv");
+
+			function showcans(element) {
+				switch (element.dataset.toggletype) {
+					case "classic":
+						if (classicdiv.style.display === "block") {
+							classicdiv.style.display = "none";
+							juiceddiv.style.display = "none";
+							ultradiv.style.display = "none";
+							rehabdiv.style.display = "none";
+						} else {
+							classicdiv.style.display = "block";
+							juiceddiv.style.display = "none";
+							ultradiv.style.display = "none";
+							rehabdiv.style.display = "none";
+						}
+						break;
+					case "juiced":
+						if (juiceddiv.style.display === "block") {
+							classicdiv.style.display = "none";
+							juiceddiv.style.display = "none";
+							ultradiv.style.display = "none";
+							rehabdiv.style.display = "none";
+						} else {
+							classicdiv.style.display = "none";
+							juiceddiv.style.display = "block";
+							ultradiv.style.display = "none";
+							rehabdiv.style.display = "none";
+						}
+						break;
+					case "ultra":
+						if (ultradiv.style.display === "block") {
+							classicdiv.style.display = "none";
+							juiceddiv.style.display = "none";
+							ultradiv.style.display = "none";
+							rehabdiv.style.display = "none";
+						} else {
+							classicdiv.style.display = "none";
+							juiceddiv.style.display = "none";
+							ultradiv.style.display = "block";
+							rehabdiv.style.display = "none";
+						}
+						break;
+					case "rehab":
+						if (rehabdiv.style.display === "block") {
+							classicdiv.style.display = "none";
+							juiceddiv.style.display = "none";
+							ultradiv.style.display = "none";
+							rehabdiv.style.display = "none";
+						} else {
+							classicdiv.style.display = "none";
+							juiceddiv.style.display = "none";
+							ultradiv.style.display = "none";
+							rehabdiv.style.display = "block";
+						}
+						break;
+					default:
+						console.log("error");
+						break;
+				}
+			}
 		</script>
 		<script
 			type="text/javascript"

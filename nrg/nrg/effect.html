@@ -102,11 +102,38 @@
 	</head>
 	<!--########### BODY ######################################################################################-->
 	<body>
-		<div class="container-fluid bg-info text-center p-1" id="cookieNotice">
+		<!-- Age Verification -->
+		<div
+			class="
+				d-flex
+				flex-column
+				min-vh-100
+				justify-content-center
+				text-center
+				mx-5
+			"
+			id="age"
+		>
+			<h3>Altersverifizierung</h3>
+			<hr />
+			<p>
+				Diese Seite enthält auch Alkohol, für den Inhalt musst du
+				mindestens 18 Jahre sein.
+			</p>
+			<div class="d-grid gap-1" id="">
+				<button class="btn btn-success" onclick="enter()">
+					Ja, bin ich.
+				</button>
+				<button class="btn btn-danger" onclick="exit()">
+					Nein, zurück zur Startseite.
+				</button>
+			</div>
+		</div>
+
+		<div id="cookieNotice" class="container-fluid bg-info text-center p-1">
 			<span>This website uses cookies Here's one for you!</span>
 			<span id="cookieNoticeCloser" onclick="setcookie()">[x]</span>
 		</div>
-
 		<!--Header-->
 		<!-- <div class="bg-dark p-3 text-center" id="header">
 			<div class="container-fluid" id="headerdiv">
@@ -117,10 +144,24 @@
 		<div id="nav-placeholder"></div>
 
 		<!--Body Grid-->
-		<div class="container-fluid" style="background-color: black">
+		<div id="hide" class="container-fluid" style="background-color: black">
 			<div class="row">
 				<div class="col text-center text-white">
 					<p class="lead" id="greeting">Good Day!</p>
+				</div>
+			</div>
+			<div class="row">
+				<div id="classic" class="col text-center text-white">
+					CLASSIC Energy
+				</div>
+				<div id="flavoured" class="col text-center text-white">
+					Flavoured Energy
+				</div>
+				<div id="bcaa" class="col text-center text-white">
+					BCAA Energy
+				</div>
+				<div id="mix" class="col text-center text-white">
+					Mix Alcohol
 				</div>
 			</div>
 		</div>
@@ -163,6 +204,36 @@
 					tooltiplistener();
 				}
 			);
+		</script>
+		<script type="text/javascript">
+			var hide_elem = document.getElementById("hide");
+			var age_elem = document.getElementById("age");
+			function enter() {
+				document.cookie =
+					"ageverify=1; SameSite=Lax; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+				age_elem.style.setProperty("display", "none", "important");
+				hide_elem.style.setProperty(
+					"visibility",
+					"visible",
+					"important"
+				);
+			}
+
+			if (document.cookie.indexOf("ageverify=1") != -1) {
+				age_elem.style.setProperty("display", "none", "important");
+				hide_elem.style.setProperty(
+					"visibility",
+					"visible",
+					"important"
+				);
+			} else {
+				// jQuery("#cookieNotice").prependTo("body");
+				// jQuery("#cookieNoticeCloser").show();
+			}
+
+			function exit() {
+				window.location.href = "https://nrg.littlebitgay.de";
+			}
 		</script>
 		<script
 			type="text/javascript"
