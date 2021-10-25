@@ -1,3 +1,19 @@
+@charset "UTF-8";
+
+#hide {
+	visibility: hidden;
+}
+#classicdiv,
+#juiceddiv,
+#ultradiv,
+#rehabdiv {
+	display: none;
+}
+
+.energys {
+	border-radius: 0 !important;
+}
+
 .rights-tooltip {
 	text-decoration: italic;
 	cursor: help;
