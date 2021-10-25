@@ -1,10 +1,11 @@
+/*jshint esversion: 6 */
 //Buttons
+const x = document.getElementById("energy");
+const y = document.getElementById("rehab");
+const z = document.getElementById("ultra");
+const a = document.getElementById("extra");
 
 function Energy() {
-	var x = document.getElementById("energy");
-	var y = document.getElementById("rehab");
-	var z = document.getElementById("ultra");
-	var a = document.getElementById("extra");
 	if (x.style.display === "block") {
 		x.style.display = "none";
 	} else {
@@ -16,10 +17,6 @@ function Energy() {
 }
 
 function Rehab() {
-	var x = document.getElementById("energy");
-	var y = document.getElementById("rehab");
-	var z = document.getElementById("ultra");
-	var a = document.getElementById("extra");
 	if (y.style.display === "block") {
 		y.style.display = "none";
 	} else {
@@ -31,10 +28,6 @@ function Rehab() {
 }
 
 function Ultra() {
-	var x = document.getElementById("energy");
-	var y = document.getElementById("rehab");
-	var z = document.getElementById("ultra");
-	var a = document.getElementById("extra");
 	if (z.style.display === "block") {
 		z.style.display = "none";
 	} else {
@@ -46,10 +39,6 @@ function Ultra() {
 }
 
 function Extra() {
-	var x = document.getElementById("energy");
-	var y = document.getElementById("rehab");
-	var z = document.getElementById("ultra");
-	var a = document.getElementById("extra");
 	if (a.style.display === "block") {
 		a.style.display = "none";
 	} else {
@@ -63,9 +52,9 @@ function Extra() {
 //Links
 
 function hideandshow(x) {
-	document.getElementById('id01').style.display='block';
+	document.getElementById("id01").style.display = "block";
 	for (i = 1; i < 16; i++) {
-		document.getElementById("ID" + i).style.display = "none";
+		document.getElementById(`ID${i}`).style.display = "none";
 	}
-	document.getElementById("ID" + x).style.display = "block";
+	document.getElementById(`ID${x}`).style.display = "block";
 }

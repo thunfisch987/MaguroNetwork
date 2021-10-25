@@ -1,5 +1,6 @@
+/*jshint esversion: 6 */
 function escapeHtml(text) {
-	var map = {
+	const map = {
 		"&": "&amp;",
 		"<": "&lt;",
 		">": "&gt;",
@@ -7,7 +8,5 @@ function escapeHtml(text) {
 		"'": "&#039;",
 	};
 
-	return text.replace(/[&<>"']/g, function (m) {
-		return map[m];
-	});
+	return text.replace(/[&<>"']/g, (m) => map[m]);
 }

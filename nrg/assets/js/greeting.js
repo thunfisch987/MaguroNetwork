@@ -1,10 +1,11 @@
-window.onload = (function () {
+/*jshint esversion: 6 */
+window.onload = (() => {
 	changegreeting();
 })();
 
 function changegreeting() {
-	var now = new Date();
-	var hour = now.getHours();
+	const now = new Date();
+	const hour = now.getHours();
 	if (hour >= 5 && hour <= 12) {
 		document.getElementById("greeting").textContent = "Guten Morgen!";
 	} else if (hour >= 12 && hour <= 17) {

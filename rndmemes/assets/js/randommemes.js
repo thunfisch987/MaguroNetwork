@@ -1,24 +1,22 @@
 /*jshint esversion: 6 */
-var fileNames = [];
-var age_elem = document.getElementById("age");
-var meme_elem = document.getElementById("meme");
-var btndiv_elem = document.getElementById("btndiv");
-var downloadbutton = document.getElementById("downloadbutton");
+const fileNames = [];
+const age_elem = document.getElementById("age");
+const meme_elem = document.getElementById("meme");
+const btndiv_elem = document.getElementById("btndiv");
+const downloadbutton = document.getElementById("downloadbutton");
 const params = new URLSearchParams(location.search);
-var file = "";
-var hidebutton = document.getElementById("hide").classList;
+let file = "";
+const hidebutton = document.getElementById("hide").classList;
 
-document.onkeyup = function (event) {
-	if (event.key !== undefined) {
-		if (event.key === "Enter") {
-			randomImage();
-		}
+document.onkeyup = (event) => {
+	if (event.key !== undefined && event.key === "Enter") {
+		randomImage();
 	}
 };
 
 $.ajax({
 	url: "memes/",
-	success: function (data) {
+	success(data) {
 		console.log(typeof data);
 		$(data)
 			.find("td > a")
@@ -26,7 +24,7 @@ $.ajax({
 				fileNames.push($(this).attr("href"));
 			});
 	},
-	complete: function (data) {
+	complete(data) {
 		fileNames.shift();
 		if (params.has("id")) {
 			displayImage(params.get("id"));
@@ -43,7 +41,7 @@ $("#downloadbutton").attr({
 });
 
 function escapeHtml(text) {
-	var map = {
+	const map = {
 		"&": "&amp;",
 		"<": "&lt;",
 		">": "&gt;",
@@ -51,9 +49,7 @@ function escapeHtml(text) {
 		"'": "&#039;",
 	};
 
-	return text.replace(/[&<>"']/g, function (m) {
-		return map[m];
-	});
+	return text.replace(/[&<>"']/g, (m) => map[m]);
 }
 
 function enter() {
@@ -68,9 +64,6 @@ if (document.cookie.indexOf("ageverify=1") != -1) {
 	age_elem.style.setProperty("display", "none", "important");
 	meme_elem.style.display = "block";
 	btndiv_elem.style.display = "block";
-} else {
-	// jQuery("#cookieNotice").prependTo("body");
-	// jQuery("#cookieNoticeCloser").show();
 }
 
 function exit() {
@@ -78,9 +71,9 @@ function exit() {
 }
 
 function displayImage(id) {
-	file = "memes/" + fileNames[id];
+	file = `memes/${fileNames[id]}`;
 	meme_elem.src = file;
-	newurl = location.pathname + "?" + params;
+	newurl = `${location.pathname}?${params}`;
 	window.history.replaceState({}, "", newurl);
 	downloadbutton.setAttribute("href", escapeHtml(file));
 }

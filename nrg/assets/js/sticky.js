@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+// jshint -W018
 // get the sticky element
 /*const stickyElm = document.getElementById('navigationbar')
 const magnet = document.getElementById('magnet')
@@ -12,8 +14,8 @@ observer.observe(stickyElm)*/
 
 function sticky() {
 	if (!!document.getElementById("header") == true) {
-		var observer = new IntersectionObserver(
-			function (entries) {
+		const observer = new IntersectionObserver(
+			(entries) => {
 				// no intersection with screen
 				if (entries[0].intersectionRatio === 0)
 					document.querySelector("#magnet").classList.add("isSticky");
