@@ -42,35 +42,35 @@
 		<!--Favicon-->
 		<link
 			rel="shortcut icon"
-			href="assets/img/favicon.gif"
+			href="../assets/img/favicon.gif"
 			type="image/gif"
 		/>
 		<link rel="icon" href="assets/img/favicon.gif" type="image/gif" />
 		<link
 			rel="apple-touch-icon"
-			href="assets/img/favicon.gif"
+			href="../assets/img/favicon.gif"
 			type="image/gif"
 		/>
 		<link
 			rel="apple-touch-icon-precomposed"
-			href="assets/img/favicon.gif"
+			href="../assets/img/favicon.gif"
 			type="image/gif"
 		/>
 
 		<link
 			rel="shortcut icon"
-			href="assets/img/favicon.ico"
+			href="../assets/img/favicon.ico"
 			type="image/x-icon"
 		/>
-		<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon" />
 		<link
 			rel="apple-touch-icon"
-			href="assets/img/favicon.ico"
+			href="../assets/img/favicon.ico"
 			type="image/x-icon"
 		/>
 		<link
 			rel="apple-touch-icon-precomposed"
-			href="assets/img/favicon.ico"
+			href="../assets/img/favicon.ico"
 			type="image/x-icon"
 		/>
 
@@ -78,8 +78,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 		<!--"Own" CSS & JS-->
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../assets/css/navbar.css"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -121,23 +125,209 @@
 				</div>
 			</div>
 			<div class="row">
-				<div id="classic" class="col text-center text-white">
-					Rockstar Classic
+				<div id="classic" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-secondary text-white energys"
+						onclick="showcans(this)"
+						data-toggletype="classic"
+					>
+						Rockstar Classic
+					</button>
 				</div>
-				<div id="hemp" class="col text-center text-white">
-					Rockstar Hemp
+				<div id="hemp" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-warning energys"
+						onclick="showcans(this)"
+						data-toggletype="hemp"
+					>
+						Rockstar Hemp
+					</button>
 				</div>
-				<div id="punched" class="col text-center text-white">
-					Rockstar Punched
+				<div id="punched" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-warning energys"
+						onclick="showcans(this)"
+						data-toggletype="punched"
+					>
+						Rockstar Punched
+					</button>
 				</div>
-				<div id="xdurance" class="col text-center text-white">
-					Rockstar XDurance
+				<div id="xdurance" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-info energys"
+						onclick="showcans(this)"
+						data-toggletype="xdurance"
+					>
+						Rockstar XDurance
+					</button>
 				</div>
-				<div id="xdpower" class="col text-center text-white">
-					Rockstar XDPower
+				<div id="xdpower" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-info energys"
+						onclick="showcans(this)"
+						data-toggletype="xdpower"
+					>
+						Rockstar XDPower
+					</button>
 				</div>
-				<div id="juiced" class="col text-center text-white">
-					Rockstar Juiced
+				<div id="juiced" class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-info energys"
+						onclick="showcans(this)"
+						data-toggletype="juiced"
+					>
+						Rockstar Juiced
+					</button>
+				</div>
+			</div>
+			<div id="classicdiv" class="mt-2">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Rockstar/original.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Rockstar/original_no_sugar.webp"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div id="hempdiv" class="mt-2">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Energy+Hemp/original.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Energy+Hemp/prickly_cactus.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Energy+Hemp/tropical_burst.webp"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div id="puncheddiv" class="mt-2">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Punched/tropical_guava.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Punched/sour_apple.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Punched/sour_raspberry.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Punched/pineapple_coconut_freeze.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Punched/watermelon_freeze.webp"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div id="xdurancediv" class="mt-2">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/XDurance/blueberry_pomegranate_acai.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/XDurance/grape.webp"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div id="xdpowerdiv" class="mt-2">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/XDPower/original.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/XDPower/waldmeister_boost.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/XDPower/berry_blast.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/XDPower/hardcore_apple.webp"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div id="juiceddiv" class="mt-2">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Juiced/tropical_orange_passion_fruit.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Juiced/machu_peachu.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Juiced/el_mango.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/rockstar/Juiced/passion_frutas.webp"
+							alt=""
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -148,17 +338,17 @@
 
 		<script
 			type="text/javascript"
-			src="assets/js/tooltiplistener.js"
+			src="../assets/js/tooltiplistener.js"
 			charset="utf-8"
 		></script>
 		<script
 			type="text/javascript"
-			src="assets/js/cookie.js"
+			src="../assets/js/cookie.js"
 			charset="utf-8"
 		></script>
 		<script
 			type="text/javascript"
-			src="assets/js/greeting.js"
+			src="../assets/js/greeting.js"
 			charset="utf-8"
 		></script>
 		<script>
@@ -182,17 +372,22 @@
 		</script>
 		<script
 			type="text/javascript"
-			src="assets/js/sticky.js"
+			src="../assets/js/sticky.js"
 			charset="utf-8"
 		></script>
 		<script
 			type="text/javascript"
-			src="assets/js/clock.js"
+			src="../assets/js/clock.js"
 			charset="utf-8"
 		></script>
 		<script
 			type="text/javascript"
 			src="https://cdn.phnx.xyz/js/maguroNav/navbar.js"
+			charset="utf-8"
+		></script>
+		<script
+			type="text/javascript"
+			src="../assets/js/rockstarshowcans.js"
 			charset="utf-8"
 		></script>
 	</body>

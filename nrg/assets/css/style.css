@@ -3,6 +3,8 @@
 #hide {
 	visibility: hidden;
 }
+
+/* Monster Divs */
 #classicdiv,
 #juiceddiv,
 #ultradiv,
@@ -10,48 +12,39 @@
 	display: none;
 }
 
-.energys {
-	border-radius: 0 !important;
-}
-
-.rights-tooltip {
-	text-decoration: italic;
-	cursor: help;
-}
-
-.rights-tooltip {
-	position: relative;
-}
-
-span.rights-tooltip {
+/* Rockstar Divs */
+#classicdiv,
+#hempdiv,
+#puncheddiv,
+#xdurancediv,
+#xdpowerdiv,
+#juiceddiv {
 	display: none;
 }
 
-span.rights-tooltip:hover {
-	display: block;
-	position: absolute;
-	bottom: 2em;
-	left: -6em;
-	width: 15em;
-	padding: 0.5em;
-	z-index: 100;
-	color: #000;
-	background-color: #ffebe6;
-	border: solid 1px #c32e04;
-	border-radius: 0.2em;
+#classicdiv,
+#hempdiv,
+#puncheddiv,
+#xdurancediv,
+#xdpowerdiv,
+#juiceddiv {
+	animation: fadeIn;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	transition: 0.5s;
 }
 
-/* #monster,
-#rockstar {
-	opacity: 0.9;
-	background-color: black;
-	transition: 0.7s;
-} */
+.fadingOut {
+	animation: fadeOut;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	transition: 0.5s;
+}
 
-#monster:hover,
-#rockstar:hover {
-	opacity: 1;
-	background-color: #171717;
+.energys {
+	border-radius: 0 !important;
 }
 
 #cookieNoticeCloser {
