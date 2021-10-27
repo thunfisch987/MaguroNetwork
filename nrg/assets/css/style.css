@@ -13,21 +13,32 @@
 }
 
 /* Rockstar Divs */
-#classicdiv,
-#hempdiv,
-#puncheddiv,
-#xdurancediv,
-#xdpowerdiv,
-#juiceddiv {
+#classic,
+#hemp,
+#punched,
+#xdurance,
+#xdpower,
+#juiced {
 	display: none;
 }
 
-#classicdiv,
-#hempdiv,
-#puncheddiv,
-#xdurancediv,
-#xdpowerdiv,
-#juiceddiv {
+/* #classicdiv img,
+#hempdiv img,
+#puncheddiv img,
+#xdurancediv img,
+#xdpowerdiv img,
+#juiceddiv img {
+	visibility: hidden;
+} */
+
+.imgFadingIn {
+	animation: fadeIn;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	transition: 0.5s;
+}
+.fadingIn {
 	animation: fadeIn;
 	animation-duration: 1s;
 	animation-timing-function: linear;

@@ -45,7 +45,7 @@
 			href="../assets/img/favicon.gif"
 			type="image/gif"
 		/>
-		<link rel="icon" href="assets/img/favicon.gif" type="image/gif" />
+		<link rel="icon" href="../assets/img/favicon.gif" type="image/gif" />
 		<link
 			rel="apple-touch-icon"
 			href="../assets/img/favicon.gif"
@@ -75,7 +75,7 @@
 		/>
 
 		<!--jQuery-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
 		<!--"Own" CSS & JS-->
 		<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
@@ -125,68 +125,62 @@
 				</div>
 			</div>
 			<div class="row">
-				<div id="classic" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-secondary text-white energys"
-						onclick="showcans(this)"
 						data-toggletype="classic"
 					>
 						Rockstar Classic
 					</button>
 				</div>
-				<div id="hemp" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-warning energys"
-						onclick="showcans(this)"
 						data-toggletype="hemp"
 					>
 						Rockstar Hemp
 					</button>
 				</div>
-				<div id="punched" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-warning energys"
-						onclick="showcans(this)"
 						data-toggletype="punched"
 					>
 						Rockstar Punched
 					</button>
 				</div>
-				<div id="xdurance" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-info energys"
-						onclick="showcans(this)"
 						data-toggletype="xdurance"
 					>
 						Rockstar XDurance
 					</button>
 				</div>
-				<div id="xdpower" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-info energys"
-						onclick="showcans(this)"
 						data-toggletype="xdpower"
 					>
 						Rockstar XDPower
 					</button>
 				</div>
-				<div id="juiced" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-info energys"
-						onclick="showcans(this)"
 						data-toggletype="juiced"
 					>
 						Rockstar Juiced
 					</button>
 				</div>
 			</div>
-			<div id="classicdiv" class="mt-2">
+			<div id="classic" class="mt-2 nrgs">
 				<div class="row">
 					<div class="col text-center text-white">
 						<img
@@ -202,7 +196,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="hempdiv" class="mt-2">
+			<div id="hemp" class="mt-2 nrgs">
 				<div class="row">
 					<div class="col text-center text-white">
 						<img
@@ -224,7 +218,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="puncheddiv" class="mt-2">
+			<div id="punched" class="mt-2 nrgs">
 				<div class="row">
 					<div class="col text-center text-white">
 						<img
@@ -258,7 +252,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="xdurancediv" class="mt-2">
+			<div id="xdurance" class="mt-2 nrgs">
 				<div class="row">
 					<div class="col text-center text-white">
 						<img
@@ -274,7 +268,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="xdpowerdiv" class="mt-2">
+			<div id="xdpower" class="mt-2 nrgs">
 				<div class="row">
 					<div class="col text-center text-white">
 						<img
@@ -302,7 +296,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="juiceddiv" class="mt-2">
+			<div id="juiced" class="mt-2 nrgs">
 				<div class="row">
 					<div class="col text-center text-white">
 						<img
@@ -387,8 +381,13 @@
 		></script>
 		<script
 			type="text/javascript"
-			src="../assets/js/rockstarshowcans.js"
+			src="../assets/js/showcans.js"
 			charset="utf-8"
 		></script>
+		<!-- <script
+			type="text/javascript"
+			src="../assets/js/rockstarshowcans.js"
+			charset="utf-8"
+		></script> -->
 	</body>
 </html>
