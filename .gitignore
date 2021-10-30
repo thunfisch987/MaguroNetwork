@@ -6,3 +6,4 @@ memes/
 convert.pyw
 .dccache
 settings.json
+node_modules/
