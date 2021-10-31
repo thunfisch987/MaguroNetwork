@@ -136,20 +136,17 @@
 		<script src="assets/js/greeting.js" charset="utf-8"></script>
 		<script>
 			$.support.cors = true;
-			$.get(
-				"https://cdn.phnx.xyz/js/maguroNav/navbar.html",
-				function (data) {
-					$("#nav-placeholder").replaceWith(data);
-					navbar();
-					sticky();
-					showTime();
-				}
-			);
+			$.get("https://cdn.phnx.xyz/maguro/navbar.html", function (data) {
+				$("#nav-placeholder").replaceWith(data);
+				navbar();
+				sticky();
+				showTime();
+			});
 		</script>
 		<script src="assets/js/sticky.js" charset="utf-8"></script>
 		<script src="assets/js/clock.js" charset="utf-8"></script>
 		<script
-			src="https://cdn.phnx.xyz/js/maguroNav/navbar.js"
+			src="https://cdn.phnx.xyz/maguro/navbar.js"
 			charset="utf-8"
 		></script>
 		<script type="text/javascript"></script>
