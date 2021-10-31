@@ -2,7 +2,7 @@
 <html lang="en" style="background-color: black">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="canonical" href="https://littlebitgay.de" />
+		<link rel="canonical" href="https://nrg.littlebitgay.de" />
 		<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" />
 		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
 		<link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin />
@@ -75,7 +75,12 @@
 		/>
 
 		<!--jQuery-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+		<script
+			src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+			integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA="
+			crossorigin="anonymous"
+		></script>
 
 		<!--"Own" CSS & JS-->
 		<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
@@ -116,88 +121,180 @@
 
 		<div id="nav-placeholder"></div>
 
-		<!--Body Grid-->
+		<!--....BODY GRID....-->
 		<div class="container-fluid" style="background-color: black">
+			<!--Greeting-->
 			<div class="row">
 				<div class="col text-center text-white">
 					<p class="lead" id="greeting">Good Day!</p>
 				</div>
 			</div>
 			<div class="row">
-				<div id="classic" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-success energys"
-						onclick="showcans(this)"
 						data-toggletype="classic"
 					>
 						Monster Classic
 					</button>
 				</div>
-				<div id="juiced" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-danger energys"
-						onclick="showcans(this)"
 						data-toggletype="juiced"
 					>
 						Monster Juiced
 					</button>
 				</div>
-				<div id="ultra" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-warning energys"
-						onclick="showcans(this)"
 						data-toggletype="ultra"
 					>
 						Monster Ultra
 					</button>
 				</div>
-				<div id="rehab" class="col text-center text-white d-grid">
+				<div class="col text-center text-white d-grid">
 					<button
 						type="button"
 						class="btn btn-info energys"
-						onclick="showcans(this)"
 						data-toggletype="rehab"
 					>
 						Monster Rehab
 					</button>
 				</div>
 			</div>
-			<div class="row">
-				<div id="classicdiv">
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
+			<div id="classic" class="mt-2 nrgs">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Monster/monster_original.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Monster/monster_nitro.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Monster/monster_mule.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Monster/monster_zero.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Monster/monster_doctor.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Monster/monster_assault.webp"
+							alt=""
+						/>
+					</div>
 				</div>
-				<div id="juiceddiv">
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
+			</div>
+			<div id="juiced" class="mt-2 nrgs">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Juiced/punch_mixxd.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Juiced/punch_mangoloco.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Juiced/juiced_pipeline-punch.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Juiced/punch_pacific-punch.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Juiced/juiced_monarch.webp"
+							alt=""
+						/>
+					</div>
 				</div>
-				<div id="ultradiv">
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
+			</div>
+			<div id="ultra" class="mt-2 nrgs">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Ultra/ultra_fiesta.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Ultra/ultra_white.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Ultra/ultra_citron.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Ultra/ultra_violet.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Ultra/ultra_paradise.webp"
+							alt=""
+						/>
+					</div>
 				</div>
-				<div id="rehabdiv">
-					<div class="col text-center text-white"></div>
-					<div class="col text-center text-white"></div>
+			</div>
+			<div id="rehab" class="mt-2 nrgs">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Rehab/rehab_lemonade.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/monster/Rehab/rehab_peach.webp"
+							alt=""
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!--<div class="container" style="height: 5000px;">
 
 		</div>-->
-
 		<div id="footer-placeholder"></div>
 
 		<script
@@ -251,7 +348,7 @@
 		></script>
 		<script
 			type="text/javascript"
-			src="../assets/js/monstershowcans.js"
+			src="../assets/js/showcans.js"
 			charset="utf-8"
 		></script>
 	</body>

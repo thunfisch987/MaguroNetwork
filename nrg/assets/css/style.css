@@ -1,14 +1,16 @@
 @charset "UTF-8";
 
-#hide {
-	visibility: hidden;
+img {
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
 }
 
 /* Monster Divs */
-#classicdiv,
-#juiceddiv,
-#ultradiv,
-#rehabdiv {
+#classic,
+#juiced,
+#ultra,
+#rehab {
 	display: none;
 }
 
@@ -20,38 +22,6 @@
 #xdpower,
 #juiced {
 	display: none;
-}
-
-/* #classicdiv img,
-#hempdiv img,
-#puncheddiv img,
-#xdurancediv img,
-#xdpowerdiv img,
-#juiceddiv img {
-	visibility: hidden;
-} */
-
-.imgFadingIn {
-	animation: fadeIn;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-	animation-iteration-count: 1;
-	transition: 0.5s;
-}
-.fadingIn {
-	animation: fadeIn;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-	animation-iteration-count: 1;
-	transition: 0.5s;
-}
-
-.fadingOut {
-	animation: fadeOut;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-	animation-iteration-count: 1;
-	transition: 0.5s;
 }
 
 .energys {
