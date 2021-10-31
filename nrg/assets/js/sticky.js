@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 // jshint -W018
+// @ts-check
 // get the sticky element
 /*const stickyElm = document.getElementById('navigationbar')
 const magnet = document.getElementById('magnet')

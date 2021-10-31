@@ -1,4 +1,5 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 11 */
+// @ts-check
 
 function showTime() {
 	const date = new Date();

@@ -1,4 +1,6 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 11 */
+// @ts-check
+
 window.onload = (() => {
 	changegreeting();
 })();
