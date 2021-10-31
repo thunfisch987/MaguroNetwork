@@ -1,5 +1,6 @@
 /* jshint esversion: 11*/
 // @ts-check
+const effect_overview = $(".overview");
 
 $("button").on("click", function (e) {
 	e.stopPropagation();
@@ -9,6 +10,7 @@ $("button").on("click", function (e) {
 	if (div.is(":hidden")) {
 		div.show(0, () => {
 			elems.hide();
+			effect_overview.hide("fade", 100);
 			elems.each(function (index) {
 				$(this)
 					.delay(400 * index)
@@ -23,6 +25,7 @@ $("button").on("click", function (e) {
 				.hide("fade", () => {
 					if (index === count - 1) {
 						div.hide();
+						effect_overview.show("fade");
 					}
 				});
 		});

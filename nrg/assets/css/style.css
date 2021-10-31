@@ -6,6 +6,13 @@ img {
 	object-fit: contain;
 }
 
+#classic,
+#flavoured,
+#bcaa,
+#mix {
+	display: none;
+}
+
 /* Monster Divs */
 #classic,
 #juiced,

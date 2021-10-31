@@ -2,7 +2,7 @@
 <html lang="en" style="background-color: black">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="canonical" href="https://littlebitgay.de" />
+		<link rel="canonical" href="https://nrg.littlebitgay.de" />
 		<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" />
 		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
 		<link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin />
@@ -75,7 +75,12 @@
 		/>
 
 		<!--jQuery-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+		<script
+			src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+			integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA="
+			crossorigin="anonymous"
+		></script>
 
 		<!--"Own" CSS & JS-->
 		<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
@@ -134,6 +139,7 @@
 			<span>This website uses cookies Here's one for you!</span>
 			<span id="cookieNoticeCloser" onclick="setcookie()">[x]</span>
 		</div>
+
 		<!--Header-->
 		<!-- <div class="bg-dark p-3 text-center" id="header">
 			<div class="container-fluid" id="headerdiv">
@@ -143,32 +149,186 @@
 
 		<div id="nav-placeholder"></div>
 
-		<!--Body Grid-->
-		<div id="hide" class="container-fluid" style="background-color: black">
+		<!--....BODY GRID....-->
+		<div
+			id="bodygrid"
+			class="container-fluid hide"
+			style="background-color: black"
+		>
+			<!--Greeting-->
 			<div class="row">
 				<div class="col text-center text-white">
 					<p class="lead" id="greeting">Good Day!</p>
 				</div>
 			</div>
 			<div class="row">
-				<div id="classic" class="col text-center text-white">
-					CLASSIC Energy
+				<div class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-success energys"
+						data-toggletype="classic"
+					>
+						effect CLASSIC
+						<img
+							class="overview"
+							src="../assets/img/effect/CLASSIC/overview.webp"
+							alt=""
+						/>
+					</button>
 				</div>
-				<div id="flavoured" class="col text-center text-white">
-					Flavoured Energy
+				<div class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-danger energys"
+						data-toggletype="flavoured"
+					>
+						effect FLAVOURED
+						<img
+							class="overview"
+							src="../assets/img/effect/FLAVOURED/overview.webp"
+							alt=""
+						/>
+					</button>
 				</div>
-				<div id="bcaa" class="col text-center text-white">
-					BCAA Energy
+				<div class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-warning energys"
+						data-toggletype="bcaa"
+					>
+						effect BCAA
+						<img
+							class="overview"
+							src="../assets/img/effect/BCAA/overview.webp"
+							alt=""
+						/>
+					</button>
 				</div>
-				<div id="mix" class="col text-center text-white">
-					Mix Alcohol
+				<div class="col text-center text-white d-grid">
+					<button
+						type="button"
+						class="btn btn-info energys"
+						data-toggletype="mix"
+					>
+						effect MIX
+						<img
+							class="overview"
+							src="../assets/img/effect/mix/overview.webp"
+							alt=""
+						/>
+					</button>
+				</div>
+			</div>
+			<div id="classic" class="mt-2 nrgs">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/CLASSIC/overview_cans.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/CLASSIC/classic_025l.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/CLASSIC/zero_033l.webp"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div id="flavoured" class="mt-2 nrgs">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/FLAVOURED/shock.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/FLAVOURED/pushd.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/FLAVOURED/pushd_zero.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/FLAVOURED/voltage.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/FLAVOURED/massive_guava.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/FLAVOURED/black_acai.webp"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div id="bcaa" class="mt-2 nrgs">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/BCAA/superberry.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/BCAA/xplode_tropical_blast.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/BCAA/shredded_cola_crush.webp"
+							alt=""
+						/>
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/BCAA/ripped_pear_boost.webp"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div id="mix" class="mt-2 nrgs">
+				<div class="row">
+					<div class="col text-center text-white">
+						<img src="../assets/img/effect/MIX/guava.webp" alt="" />
+					</div>
+					<div class="col text-center text-white">
+						<img src="../assets/img/effect/MIX/acai.webp" alt="" />
+					</div>
+					<div class="col text-center text-white">
+						<img
+							src="../assets/img/effect/MIX/classic.webp"
+							alt=""
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!--<div class="container" style="height: 5000px;">
 
 		</div>-->
-
 		<div id="footer-placeholder"></div>
 
 		<script
@@ -206,26 +366,19 @@
 			);
 		</script>
 		<script type="text/javascript">
-			var hide_elem = document.getElementById("hide");
-			var age_elem = document.getElementById("age");
+			var hide_elem = $(".hide").hide();
+			var age_elem = $("#age");
 			function enter() {
 				document.cookie =
 					"ageverify=1; SameSite=Lax; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-				age_elem.style.setProperty("display", "none", "important");
-				hide_elem.style.setProperty(
-					"visibility",
-					"visible",
-					"important"
-				);
+				age_elem.remove();
+				hide_elem.show();
+				console.log("yeet");
 			}
 
 			if (document.cookie.indexOf("ageverify=1") != -1) {
-				age_elem.style.setProperty("display", "none", "important");
-				hide_elem.style.setProperty(
-					"visibility",
-					"visible",
-					"important"
-				);
+				age_elem.remove();
+				hide_elem.show();
 			} else {
 				// jQuery("#cookieNotice").prependTo("body");
 				// jQuery("#cookieNoticeCloser").show();
@@ -248,6 +401,11 @@
 		<script
 			type="text/javascript"
 			src="https://cdn.phnx.xyz/js/maguroNav/navbar.js"
+			charset="utf-8"
+		></script>
+		<script
+			type="text/javascript"
+			src="../assets/js/showcans.js"
 			charset="utf-8"
 		></script>
 	</body>
