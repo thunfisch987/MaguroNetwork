@@ -1,11 +1,7 @@
 /*jshint esversion: 11 */
 // @ts-check
 
-window.onload = (() => {
-	changegreeting();
-})();
-
-function changegreeting() {
+$(() => {
 	const now = new Date();
 	const hour = now.getHours();
 	if (hour >= 5 && hour <= 12) {
@@ -17,4 +13,4 @@ function changegreeting() {
 	} else if ((hour >= 0 && hour <= 5) || hour == 23) {
 		document.getElementById("greeting").textContent = "Gute Nacht!";
 	}
-}
+});
