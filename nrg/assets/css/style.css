@@ -6,6 +6,23 @@ img {
 	object-fit: contain;
 }
 
+/* others Divs */
+#black_cat,
+#booster,
+#bullit,
+#burn,
+#cola,
+#crazy_wolf,
+#engie,
+#aldi,
+#kong_strong,
+#power_horse,
+#relentless,
+#spezi {
+	display: none;
+}
+
+/* effect Divs */
 #classic,
 #flavoured,
 #bcaa,
