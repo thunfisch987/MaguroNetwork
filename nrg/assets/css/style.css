@@ -6,6 +6,11 @@ img {
 	object-fit: contain;
 }
 
+/* Alt Nrgs Divs */
+.altnrgs {
+	display: none;
+}
+
 /* others Divs */
 #black_cat,
 #booster,
