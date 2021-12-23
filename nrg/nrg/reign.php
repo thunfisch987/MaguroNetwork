@@ -2,7 +2,7 @@
 <html lang="en" style="background-color: black">
 
 <head>
-	<?php include "nrghead.html" ?>
+	<?php include "../nrghead.html" ?>
 </head>
 
 <body>
