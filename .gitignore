@@ -1,9 +1,13 @@
+memes/
+/vendor/
+/.vscode/
 README.md
 Desktop.ini
 .prettierrc
-.gitignore
-memes/
-convert.pyw
 .dccache
 settings.json
+convert.pyw
+composer.*
 node_modules/
+package.json
+/package-lock.json
