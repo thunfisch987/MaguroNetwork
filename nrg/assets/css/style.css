@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+body,
+#bodygrid {
+	background-color: black !important;
+}
+
 img {
 	max-height: 100%;
 	max-width: 100%;

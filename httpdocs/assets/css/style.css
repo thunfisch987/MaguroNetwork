@@ -1,3 +1,10 @@
+@charset "UTF-8";
+
+body,
+#bodygrid {
+	background-color: black !important;
+}
+
 #cookieNoticeCloser {
 	cursor: pointer;
 	display: none;
