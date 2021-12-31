@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<?php include "../nrghead.html" ?>
+	<?php include "../nrghead.html"; ?>
 </head>
 
 <body>
@@ -96,6 +96,9 @@
 		</div>
 		<div id="ultra" class="mt-2 nrgs">
 			<div class="row">
+				<div class="col text-center text-white">
+					<img src="../assets/img/monster/Ultra/ultra_watermelon.webp" alt="">
+				</div>
 				<div class="col text-center text-white">
 					<img src="../assets/img/monster/Ultra/ultra_fiesta.webp" alt="" />
 				</div>
