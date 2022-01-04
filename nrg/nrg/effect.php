@@ -2,7 +2,7 @@
 <html lang="en" style="background-color: black">
 
 <head>
-	<?php include "../nrghead.html" ?>
+	<?php include "../nrghead.html"; ?>
 </head>
 <!--########### BODY ######################################################################################-->
 
@@ -150,9 +150,9 @@
 		</div>-->
 	<div id="footer-placeholder"></div>
 
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/tooltiplistener.js" charset="utf-8"></script>
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/cookie.js" charset="utf-8"></script>
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/greeting.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/tooltiplistener.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/cookie.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/greeting.js" charset="utf-8"></script>
 	<script>
 		$.support.cors = true;
 		$.get(
@@ -196,8 +196,8 @@
 			window.location.href = "https://nrg.littlebitgay.de";
 		}
 	</script>
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/sticky.js" charset="utf-8"></script>
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/clock.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/sticky.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/clock.js" charset="utf-8"></script>
 	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/navbar.js" charset="utf-8"></script>
 	<script type="text/javascript" src="../assets/js/showcans.js" charset="utf-8"></script>
 </body>
