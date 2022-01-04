@@ -8,7 +8,7 @@
 
 <body>
 	<!-- Age Verification -->
-	<div class="d-flex flex-column min-vh-100 justify-content-center text-center mx-5" id="age">
+	<div class="d-flex flex-column min-vh-100 justify-content-center text-center text-white mx-5" id="age">
 		<h3>Altersverifizierung</h3>
 		<hr />
 		<p>
