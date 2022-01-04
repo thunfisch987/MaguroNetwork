@@ -76,7 +76,7 @@
 			<div class="col text-center text-white d-grid">
 				<button type="button" class="btn btn-info energys" data-toggletype="mix">
 					effect MIX
-					<img class="overview" src="../assets/img/effect/mix/overview.webp" alt="" />
+					<img class="overview" src="../assets/img/effect/MIX/overview.webp" alt="" />
 				</button>
 			</div>
 		</div>
