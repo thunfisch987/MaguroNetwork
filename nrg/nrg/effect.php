@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: black">
+<html lang="en">
 
 <head>
 	<?php include "../nrghead.html"; ?>
@@ -8,25 +8,24 @@
 
 <body>
 	<!-- Age Verification -->
-	<div class="
-				d-flex
-				flex-column
-				min-vh-100
-				justify-content-center
-				text-center
-				mx-5
-			" id="age">
+	<div class="d-flex flex-column min-vh-100 justify-content-center text-center mx-5" id="age">
 		<h3>Altersverifizierung</h3>
 		<hr />
 		<p>
 			Diese Seite enthält auch Alkohol, für den Inhalt musst du
 			mindestens 18 Jahre sein.
 		</p>
+		<br />
+		<div class="form-check form-switch">
+			<input class="form-check-input" type="checkbox" value="" id="saveage" />
+			<label class="form-check-label" for="saveage">Auswahl speichern<sup>?</sup></label>
+		</div>
+
 		<div class="d-grid gap-1" id="">
-			<button class="btn btn-success" onclick="enter()">
+			<button type="button" class="btn btn-success" onclick="enter()">
 				Ja, bin ich.
 			</button>
-			<button class="btn btn-danger" onclick="exit()">
+			<button type="button" class="btn btn-danger" onclick="exit()">
 				Nein, zurück zur Startseite.
 			</button>
 		</div>
@@ -47,7 +46,7 @@
 	<div id="nav-placeholder"></div>
 
 	<!--....BODY GRID....-->
-	<div id="bodygrid" class="container-fluid hide" style="background-color: black">
+	<div id="bodygrid" class="container-fluid hide">
 		<!--Greeting-->
 		<div class="row">
 			<div class="col text-center text-white">
@@ -150,9 +149,9 @@
 		</div>-->
 	<div id="footer-placeholder"></div>
 
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/tooltiplistener.js" charset="utf-8"></script>
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/cookie.js" charset="utf-8"></script>
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/greeting.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/tooltiplistener.js" charset="utf-8" crossorigin="anonymous" integrity="sha384-b7eAsGAAFV8YjomqM5XS3mo/6ZS+G4+cPN0+GStZEhfVmz0lPV3ou1xcU0hIc4Gb sha384-4KIAhjWn/r+Nfj70/1nncqMXkqlXZRBtDXUWYy+jlUPkwv47N1280Al4siLPs17G"></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/cookie.js" charset="utf-8" crossorigin="anonymous" integrity="sha384-+f3Uto0elnYMcU2sPdeambA4SotDom2xiC/ctuTThoBs2RzpfGOLzrcYFkBQ3aBK sha384-BpCIDUCgafWZW3FJUfx0pg0k7Pf3w+3OXmI1WnikEQL38xw62QUwnHQuAjffSGWS"></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/greeting.js" charset="utf-8" crossorigin="anonymous" integrity="sha384-jme/q6jDe04bTFGFXVEML6uSdRilomYY7Wh/JjeaGszh89yz3pc3ndYDxnvVaXi9 sha384-16xSCYyrqfBFkgoEB96ljSpEBqslFAWbgOKE6W/MVP/doMIL/mbGlEyDr6gVapxg"></script>
 	<script>
 		$.support.cors = true;
 		$.get(
@@ -177,8 +176,10 @@
 		var age_elem = $("#age");
 
 		function enter() {
-			document.cookie =
-				"ageverify=1; SameSite=Lax; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+			if ($("#saveage").is(":checked")) {
+				document.cookie =
+					"ageverify=1; SameSite=Lax; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+			}
 			age_elem.remove();
 			hide_elem.show();
 			console.log("yeet");
@@ -196,9 +197,9 @@
 			window.location.href = "https://nrg.littlebitgay.de";
 		}
 	</script>
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/sticky.js" charset="utf-8"></script>
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/clock.js" charset="utf-8"></script>
-	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/navbar.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/sticky.js" charset="utf-8" crossorigin="anonymous" integrity=""></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/clock.js" charset="utf-8" crossorigin="anonymous" integrity=""></script>
+	<script type="text/javascript" src="https://cdn.phnx.xyz/maguro/js/navbar.js" charset="utf-8" crossorigin="anonymous" integrity=""></script>
 	<script type="text/javascript" src="../assets/js/showcans.js" charset="utf-8"></script>
 </body>
 
