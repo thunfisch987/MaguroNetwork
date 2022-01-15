@@ -22,48 +22,12 @@
 	<div id="nav-placeholder"></div>
 
 	<!--BODY GRID-->
-	<div class="container-fluid" style="background-color: black">
+	<div id="bodygrid" class="container-fluid">
 		<div class="row">
 			<div class="col text-center text-white">
 				<p class="lead" id="greeting">Good Day!</p>
 			</div>
 		</div>
-		<!-- <div class="row">
-				<div class="col-md" id="monsterdiv">
-					<a
-						href="./nrg/monster.html"
-						title="Monster Energy"
-						id="monsterhref"
-						class=""
-						style="display: block"
-					>
-						<img
-							src="./assets/img/monster/monster-logo-big.png"
-							alt="Monster Energy"
-							class="img-fluid mx-auto"
-							id="monster"
-							style="display: block"
-						/>
-					</a>
-				</div>
-				<div class="col-md" id="monsterdiv">
-					<a
-						href="./nrg/rockstar.html"
-						title="Rockstar Energy"
-						id="rockstarhref"
-						class=""
-						style="display: block"
-					>
-						<img
-							src="./assets/img/rockstar/rockstar-logo-big.png"
-							alt="Rockstar Energy"
-							class="img-fluid mx-auto"
-							id="rockstar"
-							style="display: block"
-						/>
-					</a>
-				</div>
-			</div> -->
 	</div>
 	<!--<div class="container" style="height: 5000px;">
 

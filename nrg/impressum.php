@@ -1,198 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: black">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="canonical" href="https://littlebitgay.de" />
-		<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" />
-		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
-		<link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin />
-		<link rel="dns-prefetch" href="https://cdn.phnx.xyz/" />
-		<link rel="preconnect" href="https://cdn.phnx.xyz/" crossorigin />
+<html lang="en">
 
-		<title>Energys4Life</title>
+<head>
+	<?php include "nrghead.html" ?>
+</head>
+<!--########### BODY ######################################################################################-->
 
-		<!-- Required meta tags -->
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
+<body>
+	<div class="container-fluid bg-info text-center p-1" id="cookieNotice">
+		<span>This website uses cookies, Here's one for you!</span>
+		<span id="cookieNoticeCloser" onclick="setcookie()">[x]</span>
+	</div>
 
-		<!--OG Tags for Social Media-->
-		<meta property="og:title" content="Energys4Life" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://nrg.littlebitgay.de" />
-		<meta
-			property="og:image"
-			content="https://nrg.littlebitgay.de/assets/img/og_gif.gif"
-		/>
-		<meta
-			property="og:image:secure_url"
-			content="https://nrg.littlebitgay.de/assets/img/og_gif.gif"
-		/>
-		<meta property="og:image:type" content="image/gif" />
-		<meta property="og:image:width" content="500" />
-		<meta property="og:image:height" content="500" />
-		<meta property="og:image:alt" content="*The* Loadcat" />
-		<meta property="og:site_name" content="Energys4Life" />
-		<meta
-			property="og:description"
-			content="Energys4Life; A Website focused on Energy Drinks. (Part of the MaguroNetwork)"
-		/>
-
-		<!--Favicon-->
-		<link
-			rel="shortcut icon"
-			href="assets/img/favicon.gif"
-			type="image/gif"
-		/>
-		<link rel="icon" href="assets/img/favicon.gif" type="image/gif" />
-		<link
-			rel="apple-touch-icon"
-			href="assets/img/favicon.gif"
-			type="image/gif"
-		/>
-		<link
-			rel="apple-touch-icon-precomposed"
-			href="assets/img/favicon.gif"
-			type="image/gif"
-		/>
-
-		<link
-			rel="shortcut icon"
-			href="assets/img/favicon.ico"
-			type="image/x-icon"
-		/>
-		<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
-		<link
-			rel="apple-touch-icon"
-			href="assets/img/favicon.ico"
-			type="image/x-icon"
-		/>
-		<link
-			rel="apple-touch-icon-precomposed"
-			href="assets/img/favicon.ico"
-			type="image/x-icon"
-		/>
-
-		<!--jQuery-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-		<!--"Own" CSS & JS-->
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-		/>
-
-		<!--Bootstrap 5 CSS & JS-->
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
-			crossorigin="anonymous"
-		/>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
-			crossorigin="anonymous"
-		></script>
-	</head>
-	<!--########### BODY ######################################################################################-->
-	<body>
-		<div class="container-fluid bg-info text-center p-1" id="cookieNotice">
-			<span>This website uses cookies, Here's one for you!</span>
-			<span id="cookieNoticeCloser" onclick="setcookie()">[x]</span>
+	<!--Header-->
+	<div class="bg-dark p-3 text-center" id="header">
+		<div class="container-fluid" id="headerdiv">
+			<h1 class="display-1" id="headertext">Energys4Life</h1>
 		</div>
+	</div>
 
-		<!--Header-->
-		<div class="bg-dark p-3 text-center" id="header">
-			<div class="container-fluid" id="headerdiv">
-				<h1 class="display-1" id="headertext">Energys4Life</h1>
+	<div id="nav-placeholder"></div>
+
+	<!--BODY GRID-->
+	<div id="bodygrid" class="container-fluid">
+		<div class="row">
+			<div class="col text-center text-white">
+				<p class="lead" id="greeting">Good Day!</p>
 			</div>
 		</div>
-
-		<div id="nav-placeholder"></div>
-
-		<!--BODY GRID-->
-		<div class="container-fluid" style="background-color: black">
-			<div class="row">
-				<div class="col text-center text-white">
-					<p class="lead" id="greeting">Good Day!</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col tex-center text-white">
-					<p>
-						Diese Website (nrg.littlebitgay.de) ist nur eine
-						Fan-Website, alle Bilder gehören den jeweiligen Firmen.
-					</p>
-					<p></p>
-					<p></p>
-					<p><strong>Impressum</strong></p>
-					<p>Anbieter:<br />thunfisch987</p>
-					<p>
-						Kontakt:<br />
-						E-Mail: thunfisch987@gmail.com<br />
-						Website: littlebitgay.de
-					</p>
-					<br /><br /><br /><br />
-					<p><em>In Loving Memory of Majumafa</em></p>
-				</div>
+		<div class="row">
+			<div class="col tex-center text-white">
+				<p>
+					Diese Website (nrg.littlebitgay.de) ist nur eine
+					Fan-Website, alle Bilder gehören den jeweiligen Firmen.
+				</p>
+				<p></p>
+				<p></p>
+				<p><strong>Impressum</strong></p>
+				<p>Anbieter:<br />thunfisch987</p>
+				<p>
+					Kontakt:<br />
+					E-Mail: thunfisch987@gmail.com<br />
+					Website: littlebitgay.de
+				</p>
+				<br /><br /><br /><br />
+				<p><em>In Loving Memory of Majumafa</em></p>
 			</div>
 		</div>
-		<!--<div class="container" style="height: 5000px;">
+	</div>
+	<!--<div class="container" style="height: 5000px;">
 
 		</div>-->
 
-		<div id="footer-placeholder"></div>
+	<div id="footer-placeholder"></div>
+	<script type="text/javascript" charset="utf-8" src="https://cdn.phnx.xyz/maguro/js/tooltiplistener.js" integrity="sha384-b7eAsGAAFV8YjomqM5XS3mo/6ZS+G4+cPN0+GStZEhfVmz0lPV3ou1xcU0hIc4Gb" crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf-8" src="https://cdn.phnx.xyz/maguro/js/cookie.js" integrity="sha384-+f3Uto0elnYMcU2sPdeambA4SotDom2xiC/ctuTThoBs2RzpfGOLzrcYFkBQ3aBK sha384-BpCIDUCgafWZW3FJUfx0pg0k7Pf3w+3OXmI1WnikEQL38xw62QUwnHQuAjffSGWS" crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf-8" src="https://cdn.phnx.xyz/maguro/js/greeting.js" integrity="sha384-jme/q6jDe04bTFGFXVEML6uSdRilomYY7Wh/JjeaGszh89yz3pc3ndYDxnvVaXi9 sha384-16xSCYyrqfBFkgoEB96ljSpEBqslFAWbgOKE6W/MVP/doMIL/mbGlEyDr6gVapxg" crossorigin="anonymous"></script>
+	<script>
+		$.support.cors = true;
+		$.get(
+			"https://cdn.phnx.xyz/maguro/nrgnavbar.html",
+			function(data) {
+				$("#nav-placeholder").replaceWith(data);
+				navbar();
+				sticky();
+				showTime();
+			}
+		);
+		$.get(
+			"https://cdn.phnx.xyz/maguro/nrgfooter.html",
+			function(data) {
+				$("#footer-placeholder").replaceWith(data);
+				tooltiplistener();
+			}
+		);
+	</script>
+	<script type="text/javascript" charset="utf-8" src="https://cdn.phnx.xyz/maguro/js/sticky.js" integrity="sha384-f/GhT1ipnwhv/n7YU7Z6s131fAPYad2TBc+jf2cpyVDhVqJ9sGKdBoe5j30dZCfN sha384-m0x3/MjcGAPsynWm3pI6yGoHyAPuLpiojQCjsNTdvehrwJcOBcsXWJXaFQn3llfL" crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf-8" src="https://cdn.phnx.xyz/maguro/js/clock.js" integrity="sha384-lEB0SNSXpj5qx7J509UMHFKh59ggSB8zLH6UcrgbQPgR8PIi/MlPgTvVs5vMIR8j sha384-iqkO4SArqyLNVPiyelbPldvP1AxCQOQTe2TukFLJMdyNEbyHC/yOrytijaosvuMT" crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf-8" src="https://cdn.phnx.xyz/maguro/js/navbar.js" integrity="sha384-qnActJEtweGF+uaLO1RerGRWbAyBWrbLONQ2R6/6xYZYAL4f8LxZGOi+u0BxNrPe sha384-8c60xfh/zqTjR4ZYDWx1BInvvZ9k3/i7sPOvhpcd3d+04qdhlpZg1XgtX90E91FO" crossorigin="anonymous"></script>
+</body>
 
-		<script
-			type="text/javascript"
-			src="https://cdn.phnx.xyz/maguro/js/tooltiplistener.js"
-			charset="utf-8"
-		></script>
-		<script
-			type="text/javascript"
-			src="https://cdn.phnx.xyz/maguro/js/cookie.js"
-			charset="utf-8"
-		></script>
-		<script
-			type="text/javascript"
-			src="https://cdn.phnx.xyz/maguro/js/greeting.js"
-			charset="utf-8"
-		></script>
-		<script>
-			$.support.cors = true;
-			$.get(
-				"https://cdn.phnx.xyz/maguro/nrgnavbar.html",
-				function (data) {
-					$("#nav-placeholder").replaceWith(data);
-					navbar();
-					sticky();
-					showTime();
-				}
-			);
-			$.get(
-				"https://cdn.phnx.xyz/maguro/nrgfooter.html",
-				function (data) {
-					$("#footer-placeholder").replaceWith(data);
-					tooltiplistener();
-				}
-			);
-		</script>
-		<script
-			type="text/javascript"
-			src="https://cdn.phnx.xyz/maguro/js/sticky.js"
-			charset="utf-8"
-		></script>
-		<script
-			type="text/javascript"
-			src="https://cdn.phnx.xyz/maguro/js/clock.js"
-			charset="utf-8"
-		></script>
-		<script
-			type="text/javascript"
-			src="https://cdn.phnx.xyz/maguro/js/navbar.js"
-			charset="utf-8"
-		></script>
-	</body>
 </html>
