@@ -152,7 +152,7 @@
 		<!--<div class="container" style="height: 5000px;">
 
 		</div>-->
-		<div class="footer fixed-bottom text-center text-white">
+		<!-- <div class="footer fixed-bottom text-center text-white">
 			&copy;2021 MaguroNetwork || MaguroNetwork &hearts; PhoenixMedia
 			Digital ||
 			<a
@@ -160,8 +160,9 @@
 				id="impressum"
 				class="link-light"
 				>Impressum</a
-			>
+			> -->
 		</div>
+		<div id="footer-placeholder"></div>
 		<script src="assets/js/cookie.js" charset="utf-8"></script>
 		<script src="assets/js/greeting.js" charset="utf-8"></script>
 		<script>
@@ -172,12 +173,15 @@
 				sticky();
 				showTime();
 			});
+			$.get("https://cdn.phnx.xyz/maguro/footer.html", function (data) {
+				$("#footer-placeholder").replaceWith(data);
+			});
 		</script>
 		<script src="assets/js/sticky.js" charset="utf-8"></script>
 		<script src="assets/js/clock.js" charset="utf-8"></script>
 		<script
 			src="https://cdn.phnx.xyz/maguro/js/navbar.js"
-			integrity="sha384-iyhWQINY04hWutK9wFNAaxMXa35BdL7mXjnh1kKkJr/nlykgRKSjOF0dIRrF97+8 sha384-pTZUmH+CfGsTZxuS2cerlLSctvqi9WwbMb9/mEaCFrt09kWN40P4wPYv8n5oK16j"
+			integrity="sha384-8c60xfh/zqTjR4ZYDWx1BInvvZ9k3/i7sPOvhpcd3d+04qdhlpZg1XgtX90E91FO sha384-qnActJEtweGF+uaLO1RerGRWbAyBWrbLONQ2R6/6xYZYAL4f8LxZGOi+u0BxNrPe"
 			crossorigin="anonymous"
 		></script>
 	</body>

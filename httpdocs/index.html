@@ -137,7 +137,7 @@
 		<!--<div class="container" style="height: 5000px;">
 
 		</div>-->
-		<div class="footer fixed-bottom text-center text-white">
+		<!-- <div class="footer fixed-bottom text-center text-white">
 			&copy;2021 MaguroNetwork || MaguroNetwork &hearts; PhoenixMedia
 			Digital ||
 			<a
@@ -145,8 +145,9 @@
 				id="impressum"
 				class="link-light"
 				>Impressum</a
-			>
+			> -->
 		</div>
+		<div id="footer-placeholder"></div>
 		<script src="assets/js/cookie.js" charset="utf-8"></script>
 		<script src="assets/js/greeting.js" charset="utf-8"></script>
 		<script>
@@ -156,6 +157,9 @@
 				navbar();
 				sticky();
 				showTime();
+			});
+			$.get("https://cdn.phnx.xyz/maguro/footer.html", function (data) {
+				$("#footer-placeholder").replaceWith(data);
 			});
 		</script>
 		<script src="assets/js/sticky.js" charset="utf-8"></script>
