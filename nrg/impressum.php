@@ -3,6 +3,12 @@
 	$theHTMLtoparse = file_get_contents("https://www.animexx.de/events");
 	if(preg_match("/:initial-events='.*'/",$theHTMLtoparse, $matches)){
 		echo $matches[0];
+		if(preg_match("/nonkicon mini.+?dateend/i",$theHTMLtoparse, $matches)){
+			echo $matches[0];
+		}
+		else {
+			echo "nothing";
+		}
 	}
 	else {
 		echo "nothing";
