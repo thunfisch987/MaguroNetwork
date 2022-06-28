@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <?php
-	$theHtmlToParse = file_get_contents("https://www.animexx.de/events");
-	$doc = new DOMDocument();
-	libxml_use_internal_errors(true);
-	$doc->loadHTML($theHtmlToParse);
-	$xpath = new DOMXpath($doc);
-	$elements = $xpath->query("//event-calender[1]");
-	if($elements->length > 0) {
-		$node = $result->item(0);
-		echo "{$node->nodeName} - {$node->nodeValue}";
+	$theHTMLtoparse = file_get_contents("https://www.animexx.de/events");
+	if(preg_match(":initial-events='.*'",$theHTMLtoparse, $matches)){
+		echo $matches[0]
 	}
 	else {
-		echo "yyyeeettt";
+		echo "nothing"
 	}
-	// echo $elements;
-	libxml_clear_errors();
-	// error_log($elements, 3, "./otaku-errors.log");
 ?>
 <html lang="en">
 
