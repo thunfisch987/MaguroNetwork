@@ -4,8 +4,8 @@
 	$doc = new DOMDocument();
 	$doc->loadHTMLFile($theHtmlToParse);
 	$xpath = new DOMXpath($doc);
-	$elements = $xpath->query("//event-calender")
-	error_log($elements, 3, "./otaku-errors.log")
+	$elements = $xpath->query("//event-calender");
+	error_log($elements, 3, "./otaku-errors.log");
 ?>
 <html lang="en">
 
