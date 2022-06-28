@@ -2,7 +2,7 @@
 <?php
 	$theHtmlToParse = file_get_contents("https://www.animexx.de/events");
 	$doc = new DOMDocument();
-	$doc->loadHTMLFile($theHtmlToParse);
+	$doc->loadHTML($theHtmlToParse);
 	$xpath = new DOMXpath($doc);
 	$elements = $xpath->query("//event-calender");
 	echo count($elements)
