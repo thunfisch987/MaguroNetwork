@@ -3,8 +3,20 @@
 	$theHTMLtoparse = file_get_contents("https://www.animexx.de/events");
 	if(preg_match("/:initial-events='.*'/",$theHTMLtoparse, $matches)){
 		// echo $matches[0];
-		if(preg_match("/nonkicon mini.+?dateend/i",$theHTMLtoparse, $matches)){
-			echo $matches[0];
+		if(preg_match("/nonkicon mini.+?dateend/i",$matches[0], $matches2)){
+			// echo $matches2[0];
+			if(preg_match("/datestart.+?dateend/i",$matches2[0], $matches3)){
+				// echo $matches3[0];
+				if(preg_match("/\d{4}-\d{2}-\d{2}/",$matches3[0], $matches4)){
+					echo $matches4[0];
+				}
+				else {
+					echo "nothing";
+				}
+			}
+			else {
+				echo "nothing";
+			}
 		}
 		else {
 			echo "nothing";
