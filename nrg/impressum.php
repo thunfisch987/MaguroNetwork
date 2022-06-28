@@ -2,10 +2,10 @@
 <?php
 	$theHTMLtoparse = file_get_contents("https://www.animexx.de/events");
 	if(preg_match(":initial-events='.*'",$theHTMLtoparse, $matches)){
-		echo $matches[0]
+		echo $matches[0];
 	}
 	else {
-		echo "nothing"
+		echo "nothing";
 	}
 ?>
 <html lang="en">
