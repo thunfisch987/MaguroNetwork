@@ -8,7 +8,7 @@
 			if(preg_match("/datestart.+?dateend/i",$matches2[0], $matches3)){
 				// echo $matches3[0];
 				if(preg_match("/\d{4}-\d{2}-\d{2}/",$matches3[0], $matches4)){
-					echo $matches4[0];
+					// echo $matches4[0];
 				}
 				else {
 					echo "nothing";
