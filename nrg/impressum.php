@@ -2,10 +2,12 @@
 <?php
 	$theHtmlToParse = file_get_contents("https://www.animexx.de/events");
 	$doc = new DOMDocument();
+	libxml_use_internal_errors(true);
 	$doc->loadHTML($theHtmlToParse);
 	$xpath = new DOMXpath($doc);
 	$elements = $xpath->query("//event-calender");
 	echo count($elements)
+	libxml_clear_errors();
 	// error_log($elements, 3, "./otaku-errors.log");
 ?>
 <html lang="en">
