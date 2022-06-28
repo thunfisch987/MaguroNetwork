@@ -8,7 +8,6 @@
 	
 		echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
 	}
-	debug_to_console($theHtmlToParse)
 ?>
 <html lang="en">
 
