@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<?php
-	$theHTMLtoparse = file_get_contents("https://www.animexx.de/events");
-	if(preg_match("/nonkicon mii.+?(\d{4}-\d{2}-\d{2}).+?dateend/i",$theHTMLtoparse, $matches)){
-		echo $matches[1];
-	}
-	else {
-		echo "<p class=lead>Kein Datum festgelegt</p>";
-	}
-?>
 <html lang="en">
 
 <head>
@@ -57,7 +48,6 @@
 			</div>
 		</div>
 	</div>
-	<div id="animexx-placeholder"></div>
 	<!--<div class="container" style="height: 5000px;">
 
 		</div>-->
