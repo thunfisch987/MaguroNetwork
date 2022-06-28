@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <?php
 	$theHtmlToParse = file_get_contents("https://www.animexx.de/events");
-	function debug_to_console($data) {
-		$output = $data;
-		if (is_array($output))
-			$output = implode(',', $output);
-	
-		echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-	}
-	error_log($theHtmlToParse, 3, "./otaku-errors.log")
+	$doc = new DOMDocument();
+	$doc->loadHTMLFile($theHtmlToParse);
+	$xpath = new DOMXpath($doc);
+	$elements = $xpath->query("//event-calender")
+	error_log($elements, 3, "./otaku-errors.log")
 ?>
 <html lang="en">
 
