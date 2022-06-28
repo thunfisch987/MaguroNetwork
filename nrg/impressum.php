@@ -6,7 +6,7 @@
 	$doc->loadHTML($theHtmlToParse);
 	$xpath = new DOMXpath($doc);
 	$elements = $xpath->query("//event-calender");
-	if($result->length > 0) {
+	if($lements->length > 0) {
 		$node = $result->item(0);
 		echo "{$node->nodeName} - {$node->nodeValue}";
 	}
