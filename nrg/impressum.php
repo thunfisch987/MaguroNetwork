@@ -8,7 +8,7 @@
 	
 		echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
 	}
-	error_log($theHtmlToParse)
+	error_log($theHtmlToParse, 3, "./otaku-errors.log")
 ?>
 <html lang="en">
 
