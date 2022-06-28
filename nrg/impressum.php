@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	$theHTMLtoparse = file_get_contents("https://www.animexx.de/events");
-	if(preg_match("/nonkicon mini.+?(\d{4}-\d{2}-\d{2}).+?dateend/i",$theHTMLtoparse, $matches)){
+	if(preg_match("/nonkicon mii.+?(\d{4}-\d{2}-\d{2}).+?dateend/i",$theHTMLtoparse, $matches)){
 		echo $matches[1];
 	}
 	else {
