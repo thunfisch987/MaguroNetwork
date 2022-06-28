@@ -10,8 +10,10 @@
 		$node = $result->item(0);
 		echo "{$node->nodeName} - {$node->nodeValue}";
 	}
-	else {}
-	echo $elements;
+	else {
+		echo "yyyeeettt";
+	}
+	// echo $elements;
 	libxml_clear_errors();
 	// error_log($elements, 3, "./otaku-errors.log");
 ?>
