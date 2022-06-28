@@ -50,7 +50,7 @@
 	</div>
 	<div id="animexx-placeholder"></div>
 	<?php
-	$theHtmlToParse = file_get_contents("https://www.animexx.de/events")
+	$theHtmlToParse = file_get_contents("https://www.animexx.de/events");
 	function debug_to_console($data) {
 		$output = $data;
 		if (is_array($output))
