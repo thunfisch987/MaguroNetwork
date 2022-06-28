@@ -51,7 +51,14 @@
 	<div id="animexx-placeholder"></div>
 	<?php
 	$theHtmlToParse = file_get_contents("https://www.animexx.de/events")
-	echo "<script>console.log(" . $theHtmlToParse . ");</script>"
+	function debug_to_console($data) {
+		$output = $data;
+		if (is_array($output))
+			$output = implode(',', $output);
+	
+		echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+	}
+	debug_to_console($theHtmlToParse)
 	?>
 	<!--<div class="container" style="height: 5000px;">
 
