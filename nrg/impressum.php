@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
 	$theHTMLtoparse = file_get_contents("https://www.animexx.de/events");
-	if(preg_match(":initial-events='.*'",$theHTMLtoparse, $matches)){
+	$yeet = "/" . $theHTMLtoparse . "/"
+	if(preg_match(":initial-events='.*'",$yeet, $matches)){
 		echo $matches[0];
 	}
 	else {
