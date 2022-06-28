@@ -48,6 +48,11 @@
 			</div>
 		</div>
 	</div>
+	<div id="animexx-placeholder"></div>
+	<?php
+	$theHtmlToParse = file_get_contents("https://www.animexx.de/events")
+	echo "<script>console.log(" . $theHtmlToParse . ");</script>"
+	?>
 	<!--<div class="container" style="height: 5000px;">
 
 		</div>-->
