@@ -1,4 +1,0 @@
-# robots.txt zu https://littlebitgay.de
-
-User-agent: *
-Disallow: /assets/
