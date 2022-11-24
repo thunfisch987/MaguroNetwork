@@ -24,7 +24,7 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 $resp = curl_exec($curl);
 curl_close($curl);
 $resp2 = json_decode($resp);
-echo $resp2->value;
+var_dump($resp2->value);
 ?>
 </body>
 
