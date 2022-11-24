@@ -24,10 +24,16 @@
     $resp = curl_exec($curl);
     curl_close($curl);
     $resp2 = json_decode($resp);
-    foreach ($resp2 as $value) {
-        // echo explode(":",$value->resourceLocation)[1] . ": " . $value->count;
-        var_dump($value);
+    $value = $resp2->value;
+    $counter = 0;
+    foreach ($value as $yeet) {
+        if (property_exists($yeet, 'resourceLocation')) {
+            echo "<p>" . explode(":",$yeet->resourceLocation)[1] . ": " . $yeet->count . "</p>";
+        } else {
+            $counter++;
+        }
     }
+    echo "<p>" . "LEER: " . $counter . "</p>";
     ?>
 </body>
 
