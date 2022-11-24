@@ -26,8 +26,8 @@
     $resp2 = json_decode($resp);
     foreach ($resp2 as $value) {
         // echo explode(":",$value->resourceLocation)[1] . ": " . $value->count;
-        echo $value;
-    };
+        var_dump($value);
+    }
     ?>
 </body>
 
