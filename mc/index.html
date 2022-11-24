@@ -11,7 +11,7 @@
 <body>
     <script>
         const userAction = async () => {
-            const response = await fetch('http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4');
+            const response = await fetch('http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4', {mode:"no-cors"});
             const myJson = await response.json(); //extract JSON from the http response
             // do something with myJson
             console.log(myJson);
