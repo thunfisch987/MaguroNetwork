@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-			src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
-			integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
-			crossorigin="anonymous"
-	></script>
     <title>Document</title>
 </head>
+
 <body>
     <script>
-            $.support.cors = true;
-			$.get("http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4", function (data) {
-				console.log(data)
-			}, "jsonp")
-            // $.ajax({
-            //     type: 'GET',
-            //     crossDomain: true,
-            //     dataType: 'jsonp',
-            //     url: 'http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4',
-            //     success: function(jsondata){
-            //         console.log(jsondata)
-            //     }
-            // })
+        const userAction = async () => {
+            const response = await fetch('http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4');
+            const myJson = await response.json(); //extract JSON from the http response
+            // do something with myJson
+            console.log(myJson);
+        }
     </script>
 </body>
+
 </html>
