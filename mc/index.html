@@ -13,7 +13,7 @@
 </head>
 <body>
     <script>
-        
+            $.support.cors = true;
 			$.get("http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4", function (data) {
 				console.log(data)
 			})
