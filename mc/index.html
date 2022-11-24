@@ -10,8 +10,14 @@
 
 <body>
     <script>
+        url = "http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4"
         const userAction = async () => {
-            const response = await fetch('http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4', {mode:"no-cors"});
+            const response = await fetch(url, {
+                mode: "no-cors",
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
             const myJson = await response.blob(); //extract JSON from the http response
             // do something with myJson
             console.dir(myJson);
