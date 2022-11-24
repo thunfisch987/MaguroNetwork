@@ -10,13 +10,27 @@
 
 <body>
     <script>
-        const userAction = async () => {
-            const response = await fetch('http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4', {mode:"no-cors"});
-            const myJson = await response.blob(); //extract JSON from the http response
-            // do something with myJson
-            console.dir(myJson);
-        }
-        userAction()
+        // const userAction = async () => {
+        //     const response = await fetch('http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4', {mode:"no-cors"});
+        //     const myJson = await response.blob(); //extract JSON from the http response
+        //     // do something with myJson
+        //     console.dir(myJson);
+        // }
+        // userAction()
+        var url = "http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4";
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                console.log(xhr.status);
+                console.log(xhr.responseText);
+            }
+        };
+
+        xhr.send();
+
     </script>
 </body>
 
