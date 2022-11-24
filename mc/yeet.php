@@ -25,7 +25,8 @@
     curl_close($curl);
     $resp2 = json_decode($resp);
     foreach ($resp2 as $value) {
-        echo explode(":",$value->resourceLocation)[1] . ": " . $value->count;
+        // echo explode(":",$value->resourceLocation)[1] . ": " . $value->count;
+        echo $value;
     };
     ?>
 </body>
