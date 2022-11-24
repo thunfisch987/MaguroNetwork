@@ -18,7 +18,7 @@
                     'Content-Type': 'application/json'
                 }
             });
-            const myJson = await response.blob(); //extract JSON from the http response
+            const myJson = await response.json(); //extract JSON from the http response
             // do something with myJson
             console.dir(myJson);
         }
