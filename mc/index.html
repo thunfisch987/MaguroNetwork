@@ -14,15 +14,18 @@
 <body>
     <script>
             $.support.cors = true;
-            $.ajax({
-                type: 'GET',
-                crossDomain: true,
-                dataType: 'jsonp',
-                url: 'http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4',
-                success: function(jsondata){
-                    console.log(jsondata)
-                }
-            })
+			$.get("http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4", function (data) {
+				console.log(data)
+			}, "jsonp")
+            // $.ajax({
+            //     type: 'GET',
+            //     crossDomain: true,
+            //     dataType: 'jsonp',
+            //     url: 'http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4',
+            //     success: function(jsondata){
+            //         console.log(jsondata)
+            //     }
+            // })
     </script>
 </body>
 </html>
