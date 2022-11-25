@@ -11,7 +11,7 @@
 <body>
     <?php
 
-    $url = "http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/4";
+    $url = "http://mc.phnx.xyz:30814/networkElement/integrateddynamics/part/6";
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_URL, $url);
