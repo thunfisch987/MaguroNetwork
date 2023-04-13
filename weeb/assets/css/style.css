@@ -3,9 +3,6 @@ div {
   /*border: 1px solid lime;*/
 }
 
-#cookieNotice {
-}
-
 #cookieNoticeCloser {
   cursor: pointer;
   display: none;
