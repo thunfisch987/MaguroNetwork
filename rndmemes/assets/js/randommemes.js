@@ -10,6 +10,7 @@ const exitbutton = document.querySelector("div.age button.btn-danger");
 let file = "";
 const hidebutton = document.getElementById("hide").classList;
 const randombutton = document.getElementById("randombutton");
+const hidebuttonbutton = document.getElementById("hidebutton");
 
 document.onkeyup = (event) => {
 	if (event.key !== undefined && event.key === "Enter") {
@@ -109,3 +110,4 @@ function togglehide() {
 		console.log("Error");
 	}
 }
+hidebuttonbutton.addEventListener("click", togglehide);
