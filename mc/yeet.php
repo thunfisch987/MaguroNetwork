@@ -33,7 +33,7 @@
             $counter++;
         }
     }
-    echo "<p>" . "LEER: " . $counter . "</p>";
+    echo "<p>LEER: " . $counter . "</p>";
     ?>
 </body>
 
