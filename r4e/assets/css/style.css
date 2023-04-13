@@ -15,9 +15,6 @@ div {
   color: white;
 }
 
-#cookieNotice {
-}
-
 #cookieNoticeCloser {
   cursor: pointer;
   display: none;
