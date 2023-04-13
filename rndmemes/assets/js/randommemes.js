@@ -27,7 +27,7 @@ $.ajax({
 				fileNames.push($(this).attr("href"));
 			});
 	},
-	complete(data) {
+	complete() {
 		fileNames.shift();
 		if (params.has("id")) {
 			displayImage(params.get("id"));
