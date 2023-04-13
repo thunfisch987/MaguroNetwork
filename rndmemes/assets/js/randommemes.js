@@ -5,8 +5,11 @@ const meme_elem = document.getElementById("meme");
 const btndiv_elem = document.getElementById("btndiv");
 const downloadbutton = document.getElementById("downloadbutton");
 const params = new URLSearchParams(location.search);
+const enterbutton = document.querySelector("div.age button.btn-success");
+const exitbutton = document.querySelector("div.age button.btn-danger");
 let file = "";
 const hidebutton = document.getElementById("hide").classList;
+const randombutton = document.getElementById("randombutton");
 
 document.onkeyup = (event) => {
 	if (event.key !== undefined && event.key === "Enter") {
@@ -52,6 +55,7 @@ function escapeHtml(text) {
 	return text.replace(/[&<>"']/g, (m) => map[m]);
 }
 
+
 function enter() {
 	document.cookie =
 		"ageverify=1; SameSite=Lax; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
@@ -59,6 +63,7 @@ function enter() {
 	meme_elem.style.display = "block";
 	btndiv_elem.style.display = "block";
 }
+enterbutton.addEventListener("click", enter);
 
 if (document.cookie.indexOf("ageverify=1") != -1) {
 	age_elem.style.setProperty("display", "none", "important");
@@ -69,6 +74,7 @@ if (document.cookie.indexOf("ageverify=1") != -1) {
 function exit() {
 	window.location.href = "https://littlebitgay.de";
 }
+exitbutton.addEventListener("click", exit);
 
 function displayImage(id) {
 	file = `memes/${fileNames[id]}`;
@@ -83,6 +89,7 @@ function randomImage() {
 	displayImage(randomid);
 	params.set("id", randomid);
 }
+randombutton.addEventListener("click", randomImage);
 
 function togglehide() {
 	const uploadbutton = document.getElementById("upload");
