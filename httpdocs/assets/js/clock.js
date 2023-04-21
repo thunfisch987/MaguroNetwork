@@ -16,6 +16,7 @@ function calcTime() {
     const s = date.getSeconds(); // 0 - 59
     const time = `${h}:${m}:${s}`;
     self.postMessage(time);
+	console.log(time)
 
     setTimeout(showTime, 1000);
 }
