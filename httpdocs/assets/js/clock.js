@@ -3,9 +3,10 @@
 var loaded = false;
 
 self.onmessage = (message) => {
-	loaded = message
+	loaded = message;
+	console.log("worker rec message");
 	if (loaded) {
-		calcTime()
+		calcTime();
 	}
 };
 
@@ -16,7 +17,7 @@ function calcTime() {
     const s = date.getSeconds(); // 0 - 59
     const time = `${h}:${m}:${s}`;
     self.postMessage(time);
-	console.log(time)
+	console.log(time);
 
     setTimeout(showTime, 1000);
 }
