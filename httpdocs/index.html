@@ -144,7 +144,6 @@
             $.support.cors = true;
 			var clockWorker = new Worker("assets/js/clock.js");
             clockWorker.onmessage = (message) => {
-				console.log(message.data);
                 clockElem.textContent = message.data;
             };
             $.get("https://cdn.phnx.xyz/maguro/navbar.html", function (data) {
@@ -159,7 +158,6 @@
             });
         </script>
         <script src="assets/js/sticky.js" charset="utf-8"></script>
-        <script src="assets/js/clock.js" charset="utf-8"></script>
         <script
             src="https://cdn.phnx.xyz/maguro/js/navbar.js"
             integrity="sha384-8c60xfh/zqTjR4ZYDWx1BInvvZ9k3/i7sPOvhpcd3d+04qdhlpZg1XgtX90E91FO sha384-qnActJEtweGF+uaLO1RerGRWbAyBWrbLONQ2R6/6xYZYAL4f8LxZGOi+u0BxNrPe"
