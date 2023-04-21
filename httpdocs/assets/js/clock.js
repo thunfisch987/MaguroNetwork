@@ -4,6 +4,7 @@ var loaded = false;
 
 self.onmessage = (message) => {
 	loaded = message.data;
+	console.log(message.data)
 	if (loaded) {
 		calcTime();
 	}
