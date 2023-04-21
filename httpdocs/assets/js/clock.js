@@ -18,5 +18,5 @@ function calcTime() {
     const time = `${h}:${m}:${s}`;
     self.postMessage(time);
 
-    setTimeout(showTime, 1000);
+    setTimeout(calcTime, 1000);
 }
