@@ -146,7 +146,7 @@
             $.support.cors = true;
             $.get("https://cdn.phnx.xyz/maguro/navbar.html", function (data) {
                 $("#nav-placeholder").replaceWith(data);
-                navbar();
+                // navbar();
                 sticky();
                 showTime();
                 clockElem = document.getElementById("clock");
@@ -158,6 +158,7 @@
             $.get("https://cdn.phnx.xyz/maguro/footer.html", function (data) {
                 $("#footer-placeholder").replaceWith(data);
             });
+
         </script>
         <script src="assets/js/sticky.js" charset="utf-8"></script>
         <script src="assets/js/clock.js" charset="utf-8"></script>
