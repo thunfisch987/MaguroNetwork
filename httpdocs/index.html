@@ -141,24 +141,21 @@
         <script src="assets/js/cookie.js" charset="utf-8"></script>
         <script src="assets/js/greeting.js" charset="utf-8"></script>
         <script>
-            var clockElem;
-            var clockWorker;
             $.support.cors = true;
+			var clockWorker = new Worker("assets/js/clock.js");
+            clockWorker.onmessage = (message) => {
+                clockElem.textContent = message;
+            };
             $.get("https://cdn.phnx.xyz/maguro/navbar.html", function (data) {
                 $("#nav-placeholder").replaceWith(data);
                 // navbar();
                 sticky();
-                showTime();
                 clockElem = document.getElementById("clock");
-                clockWorker = new Worker("assets/js/clock.js");
-                clockWorker.onmessage = (message) => {
-                    clockElem.textContent = message;
-                };
+				clockWorker.postMessage(true)
             });
             $.get("https://cdn.phnx.xyz/maguro/footer.html", function (data) {
                 $("#footer-placeholder").replaceWith(data);
             });
-
         </script>
         <script src="assets/js/sticky.js" charset="utf-8"></script>
         <script src="assets/js/clock.js" charset="utf-8"></script>

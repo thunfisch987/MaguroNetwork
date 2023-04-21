@@ -1,12 +1,21 @@
 /*jshint esversion: 6 */
-function showTime() {
-	const date = new Date();
-	const h = date.getHours(); // 0 - 23
-	const m = date.getMinutes(); // 0 - 59
-	const s = date.getSeconds(); // 0 - 59
 
-	const time = `${h}:${m}:${s}`;
-	self.postMessage(time)
+var loaded = false;
 
-	setTimeout(showTime, 1000);
+self.onmessage = (message) => {
+	loaded = message
+	if (loaded) {
+		calcTime()
+	}
+};
+
+function calcTime() {
+    const date = new Date();
+    const h = date.getHours(); // 0 - 23
+    const m = date.getMinutes(); // 0 - 59
+    const s = date.getSeconds(); // 0 - 59
+    const time = `${h}:${m}:${s}`;
+    self.postMessage(time);
+
+    setTimeout(showTime, 1000);
 }
