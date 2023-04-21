@@ -161,6 +161,11 @@
 			$.get("https://cdn.phnx.xyz/maguro/footer.html", function (data) {
 				$("#footer-placeholder").replaceWith(data);
 			});
+			var clockElem = document.getElementById("clock");
+			var clockWorker = new Worker('assets/js/clock.js');
+			clockWorker.onmessage = (message) => {
+				clockElem.textContent = message;
+			}
 		</script>
 		<script src="assets/js/sticky.js" charset="utf-8"></script>
 		<script src="assets/js/clock.js" charset="utf-8"></script>

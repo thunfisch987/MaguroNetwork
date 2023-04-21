@@ -6,8 +6,7 @@ function showTime() {
 	const s = date.getSeconds(); // 0 - 59
 
 	const time = `${h}:${m}:${s}`;
-	document.getElementById("clock").innerText = time;
-	document.getElementById("clock").textContent = time;
+	self.postMessage(time)
 
 	setTimeout(showTime, 1000);
 }
