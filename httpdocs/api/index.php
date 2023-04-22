@@ -22,5 +22,6 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 $resp = curl_exec($curl);
 curl_close($curl);
 $respjson = json_decode($resp);
+echo "yeet";
 var_dump($respjson);
 ?>
