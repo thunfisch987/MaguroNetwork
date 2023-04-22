@@ -2,7 +2,6 @@
 $username = "littlebitgayTV";
 $url = "https://api.twitch.tv/helix/streams?user_login=" . $username;
 $authtoken = "Authorization: " . file_get_contents("./.twitchtoken");
-echo $authtoken;
 
 //init curl
 $curl = curl_init($url);
