@@ -2,6 +2,7 @@
 $username = "littlebitgayTV";
 $url = "https://api.twitch.tv/helix/streams?user_login=" . $username;
 $authtoken = "Authorization: " . file_get_contents("./.twitchtoken");
+$authtoken = substr($authtoken, 0, -1);
 
 //init curl
 $curl = curl_init($url);
@@ -21,7 +22,10 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 $resp = curl_exec($curl);
 curl_close($curl);
-var_dump($resp);
 $respjson = json_decode($resp);
-var_dump($respjson);
+if (empty($respjson->data)){
+	echo "false";
+} else {
+	echo "true";
+}
 ?>
