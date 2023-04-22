@@ -1,6 +1,5 @@
 <?php
-
-$username = "littlebitgayTV"
+$username = "littlebitgayTV";
 $url = "https://api.twitch.tv/helix/streams?user_login=" . $username;
 $authtoken = "Authorization: " . file_get_contents("./twitchtoken");
 
@@ -23,6 +22,5 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 $resp = curl_exec($curl);
 curl_close($curl);
 $respjson = json_decode($resp);
-echo $respjson;
-
+var_dump($respjson);
 ?>
