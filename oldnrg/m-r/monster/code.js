@@ -1,9 +1,19 @@
 /*jshint esversion: 6 */
 //Buttons
-const x = document.getElementById("energy");
-const y = document.getElementById("rehab");
-const z = document.getElementById("ultra");
-const a = document.getElementById("extra");
+"'use strict'"
+
+var x;
+var y;
+var z;
+var a;
+
+document.addEventListener("DOMContentLoaded", function() {
+	x = document.getElementById("energy");
+	y = document.getElementById("rehab");
+	z = document.getElementById("ultra");
+	a = document.getElementById("extra");
+})
+
 
 function Energy() {
 	if (x.style.display === "block") {
