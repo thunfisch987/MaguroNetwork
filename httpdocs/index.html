@@ -146,20 +146,20 @@
             clockWorker.onmessage = (message) => {
                 clockElem.textContent = message.data;
             };
-            $.get("https://cdn.phnx.xyz/maguro/navbar.html", function (data) {
+            $.get("https://cdn.phnx.xyz/static/maguro/navbar.html", function (data) {
                 $("#nav-placeholder").replaceWith(data);
                 // navbar();
                 sticky();
                 clockElem = document.getElementById("clock");
 				clockWorker.postMessage(true)
             });
-            $.get("https://cdn.phnx.xyz/maguro/footer.html", function (data) {
+            $.get("https://cdn.phnx.xyz/static/maguro/footer.html", function (data) {
                 $("#footer-placeholder").replaceWith(data);
             });
         </script>
         <script src="assets/js/sticky.js" charset="utf-8"></script>
         <script
-            src="https://cdn.phnx.xyz/maguro/js/navbar.js"
+            src="https://cdn.phnx.xyz/static/maguro/js/navbar.js"
             integrity="sha384-8c60xfh/zqTjR4ZYDWx1BInvvZ9k3/i7sPOvhpcd3d+04qdhlpZg1XgtX90E91FO sha384-qnActJEtweGF+uaLO1RerGRWbAyBWrbLONQ2R6/6xYZYAL4f8LxZGOi+u0BxNrPe"
             crossorigin="anonymous"
         ></script>
